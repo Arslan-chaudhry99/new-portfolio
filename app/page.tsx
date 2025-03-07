@@ -46,7 +46,7 @@ export default function Page() {
                   Hey there, I’m <br />
                   <span className="gradient-text bg-clip-text font-semibold md:text-5xl md:leading-none">
                     {" "}
-                    Arslan Jameel.
+                    Arslan Chaudhry.
                   </span>
                 </h1>
                 <p className="mt-7 text-lg leading-relaxed font-medium text-gray-400 max-w-xl">

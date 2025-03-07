@@ -14,7 +14,7 @@ const Resume: React.FC = () => {
           <header className="border-b  flex-col md:flex-row mt-[100px] border-gray-300 px-8 pt-8 pb-4 flex item-center justify-between">
             <div>
               <h1 className="text-3xl font-bold tracking-wide gradient-text bg-clip-text font-semibold md:text-5xl md:leading-none">
-                Arslan Jameel
+                Arslan Chaudhry
               </h1>
               <h2 className="text-lg font-semibold text-white">
                 Software Engineer
