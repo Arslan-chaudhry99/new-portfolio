@@ -3,7 +3,7 @@ import React from "react";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 
-const page = () => {
+const Contact = () => {
   return (
     <>
       <div id="___gatsby">
@@ -115,4 +115,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Contact;

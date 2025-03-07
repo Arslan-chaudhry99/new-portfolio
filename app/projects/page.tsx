@@ -15,7 +15,7 @@ import Footer from "../components/Footer";
 
 // import highSchool from "./assess/imgs/audioApp.png"
 
-const Project = () => {
+const Projects = () => {
   const [hovered, setHovered] = useState(false);
   const [currentDiv, setCurrentDiv] = useState<number | string>(-1);
   const [translate, setTranslate] = useState({ x: 0, y: 0 });
@@ -545,4 +545,4 @@ const Project = () => {
     </>
   );
 };
-export default Project;
+export default Projects;
