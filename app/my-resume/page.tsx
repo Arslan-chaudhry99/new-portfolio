@@ -8,7 +8,7 @@ import DownloadButton from "./DownloadButton";
 const Resume: React.FC = () => {
   return (
     <div id="___gatsby" className="relative">
-          <div className="mt-4 md:mt-0 right-[20px] flex justify-end !sticky float-end z-50 mt-6">
+          <div className="mt-5 md:mt-0 right-[20px] flex justify-end !sticky float-end z-50 mt-6">
              <DownloadButton/>
             </div>
       <div id="gatsby-focus-wrapper" style={{ outline: "none" }}>
