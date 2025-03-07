@@ -106,7 +106,7 @@ const Resume: React.FC = () => {
                     <span className="font-normal">ZECH Inc</span>
                   </h4>
                   <p className="text-sm text-white">
-                    11/2023 – present | Lahore, Pakistan
+                    Nov 2023 – Present | Lahore, Pakistan
                   </p>
                   <p className="mt-2 text-sm">
                     <strong>Projects:</strong> Meteor, Manjam Funds (crypto
@@ -126,7 +126,7 @@ const Resume: React.FC = () => {
                     <span className="font-normal">TxLab</span>
                   </h4>
                   <p className="text-sm text-white">
-                    11/2022 – 10/2023 | Lahore, Pakistan
+                  Nov 2022  –  Oct 2023 | Lahore, Pakistan
                   </p>
                   <p className="mt-2 text-sm">
                     <strong>Projects:</strong> Ajman Sewerage, Mawedii, Rivalog,
@@ -136,6 +136,16 @@ const Resume: React.FC = () => {
                     <strong>Skills:</strong> React.js, Tailwind CSS, MongoDB,
                     Mongoose, Node.js, Express.js, Redux
                   </p>
+                </div>
+                <div className="mb-4">
+                  <h4 className="font-semibold">
+                  Software Engineering Intern –{" "}
+                    <span className="font-normal">MultiServ</span>
+                  </h4>
+                  <p className="text-sm text-white">
+                  Nov 2022  –  Oct 2023 | Lahore, Pakistan
+                  </p>
+                
                 </div>
               </section>
 

@@ -300,7 +300,7 @@ export default function Page() {
                           </div>
                           <div className="relative w-full">
                             <div className="ml-5">
-                              <div className="flex flex-col-reverse items-start sm:flex-row justify-between gap-2 sm:gap-4">
+                              <div className="flex items-center sm:flex-row justify-between gap-2 sm:gap-4">
                                 <a
                                   className="font-medium text-sm hover:bg-gray-700 px-2 -ml-2 py-0.5 -my-0.5 rounded-full transition-colors !text-white"
                                   href="https://www.linkedin.com/company/zech-inc/"
@@ -334,7 +334,7 @@ export default function Page() {
                           </div>
                           <div className="relative w-full">
                             <div className="ml-5">
-                              <div className="flex flex-col-reverse items-start sm:flex-row justify-between gap-2 sm:gap-4">
+                              <div className="flex items-center sm:flex-row justify-between gap-2 sm:gap-4">
                                 <a
                                   className="font-medium text-sm hover:bg-gray-700 px-2 -ml-2 py-0.5 -my-0.5 rounded-full transition-colors"
                                   href="https://www.linkedin.com/company/txlabz/"
@@ -367,7 +367,7 @@ export default function Page() {
                           </div>
                           <div className="relative w-full">
                             <div className="ml-5">
-                              <div className="flex flex-col-reverse items-start sm:flex-row justify-between gap-2 sm:gap-4">
+                              <div className="flex items-center sm:flex-row justify-between gap-2 sm:gap-4">
                                 <a
                                   className="font-medium text-sm hover:bg-gray-700 px-2 -ml-2 py-0.5 -my-0.5 rounded-full transition-colors"
                                   href="https://www.linkedin.com/company/multi-serv/posts/?feedView=all"
@@ -377,9 +377,9 @@ export default function Page() {
                                   MultiServ{" "}
                                 </a>
                                 <div className="text-xs text-gray-400">
-                                  <time dateTime="">Jan 2022</time>
+                                  <time dateTime="">Jul 2022</time>
                                   &nbsp;&nbsp;–&nbsp;&nbsp;
-                                  <time dateTime="">May 2022</time>
+                                  <time dateTime="">Nov 2022</time>
                                 </div>
                               </div>
                               <div className="font-medium text-xs mt-0.5 text-gray-400">
