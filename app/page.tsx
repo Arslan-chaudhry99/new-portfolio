@@ -226,7 +226,7 @@ export default function Page() {
                 >
                   <div className="absolute inset-0 bg-dots fade-y opacity-70"></div>
                   <div className="relative">
-                    <h2 className="text-2xl font-semibold tracking-tight">
+                    <h2 className="text-2xl font-semibold tracking-tight !text-white">
                       About me
                     </h2>
                     <div className="mt-6 space-y-4 tracking-wide leading-relaxed text-gray-400 font-medium">
@@ -266,7 +266,7 @@ export default function Page() {
                   <div className="lg:hidden text-center absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-75% to-[#1E1E21] rounded-b-2xl">
                     <button
                       style={{ background: "rgba(39, 39, 42, .9) !important" }}
-                      className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900  shadow-xl shadow-black/20 ring-1 [&:not(:focus)]:ring-inset ring-gray-700/30 hover:bg-gray-700/70 focus:ring-gray-600 focus:ring-offset-2 text-sm font-medium px-4 py-2 mt-14"
+                      className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900  shadow-xl shadow-black/20 ring-1 [&:not(:focus)]:ring-inset ring-gray-700/30 hover:bg-gray-700/70 focus:ring-gray-600 focus:ring-offset-2 text-sm font-medium px-4 py-2 mt-14 !text-white"
                       onClick={() => {
                         setReadMore(!readMore);
                       }}
@@ -281,7 +281,7 @@ export default function Page() {
                 >
                   <div className="absolute inset-0 bg-dots fade-y opacity-70"></div>
                   <div className="relative">
-                    <h2 className="text-2xl font-semibold tracking-tight">
+                    <h2 className="text-2xl font-semibold tracking-tight !text-white">
                       Experience
                     </h2>
 
@@ -302,7 +302,7 @@ export default function Page() {
                             <div className="ml-5">
                               <div className="flex flex-col-reverse items-start sm:flex-row justify-between gap-2 sm:gap-4">
                                 <a
-                                  className="font-medium text-sm hover:bg-gray-700 px-2 -ml-2 py-0.5 -my-0.5 rounded-full transition-colors"
+                                  className="font-medium text-sm hover:bg-gray-700 px-2 -ml-2 py-0.5 -my-0.5 rounded-full transition-colors !text-white"
                                   href="https://www.linkedin.com/company/zech-inc/"
                                   target="_blank"
                                   rel="noopener noreferrer"
@@ -399,7 +399,7 @@ export default function Page() {
               >
                 <div className="absolute inset-0 bg-dots fade-y opacity-70"></div>
                 <div className="relative flex flex-col items-start h-full">
-                  <h2 className="text-2xl font-semibold tracking-tight">
+                  <h2 className="text-2xl font-semibold tracking-tight !text-white">
                     My skills
                   </h2>
                   <p className="mt-6 space-y-4 tracking-wide leading-relaxed text-gray-400 font-medium">
@@ -409,7 +409,7 @@ export default function Page() {
                     working with:
                   </p>
                   <ul className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-7 font-medium">
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -428,7 +428,7 @@ export default function Page() {
                       </svg>
                       TypeScript
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -447,7 +447,7 @@ export default function Page() {
                       </svg>
                       JavaScript
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -466,7 +466,7 @@ export default function Page() {
                       </svg>
                       React native
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -485,7 +485,7 @@ export default function Page() {
                       </svg>
                       CSS
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -504,7 +504,7 @@ export default function Page() {
                       </svg>
                       Tailwind CSS
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -523,7 +523,7 @@ export default function Page() {
                       </svg>
                       React.js
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -542,7 +542,7 @@ export default function Page() {
                       </svg>
                       Next.js
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -561,7 +561,7 @@ export default function Page() {
                       </svg>
                       Redux
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -580,7 +580,7 @@ export default function Page() {
                       </svg>
                       Node.js
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -599,7 +599,7 @@ export default function Page() {
                       </svg>
                       Express.js
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -618,7 +618,7 @@ export default function Page() {
                       </svg>
                       Mongoose
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -637,7 +637,7 @@ export default function Page() {
                       </svg>
                       MongoDB
                     </li>
-                    <li className="flex items-center gap-3 group">
+                    <li className="flex items-center gap-3 group !text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -661,7 +661,7 @@ export default function Page() {
               </div>
             </section>
             <section className="container mx-auto px-8 2xl:px-32 mt-48">
-              <h2 className="text-3xl font-semibold tracking-tight leading-normal">
+              <h2 className="text-3xl font-semibold tracking-tight leading-normal !text-white">
                 Projects I Take the Most Pride In
               </h2>
               <div className="flex flex-col items-start gap-4 md:flex-row md:items-end justify-between">

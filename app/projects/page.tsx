@@ -357,7 +357,7 @@ const Projects = () => {
                       ></div>
                       <div className="group-first/section:-mt-20 pt-24 pb-6 -mx-8 px-8 md:!mt-12 md:mr-10 md:py-0  sticky z-10 -top-px md:top-72 flex gap-8 items-center">
                         <div className="hidden md:block w-2 h-2 rounded-full bg-gray-500 ring-2 ring-offset-2 ring-offset-gray-900 ring-gray-600"></div>
-                        <h2 className="text-3xl md:text-4xl font-semibold lg:w-36 flex-shrink-0">
+                        <h2 className="text-3xl md:text-4xl font-semibold lg:w-36 flex-shrink-0 !text-white">
                           {item.year}
                         </h2>
                       </div>
