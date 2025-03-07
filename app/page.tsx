@@ -25,7 +25,7 @@ import redux from "./assess/imgs/redux.png";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 
-export default function Home() {
+export default function Page() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const [readMore, setReadMore] = useState(false);
