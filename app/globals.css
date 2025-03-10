@@ -24,7 +24,9 @@
   user-select: text;
   
 }
-
+.KgfssQl8RzJGwFogbANP{
+  display:  none !important;
+}
 
 body {
   color: rgb(var(--foreground-rgb));

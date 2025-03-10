@@ -80,9 +80,9 @@ const Contact = () => {
                         />
                       </div>
                       <button
-                        className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900  shadow-xl shadow-black/20 ring-1 [&:not(:focus)]:ring-inset ring-gray-700/30 hover:bg-gray-700/70 focus:ring-gray-600 focus:ring-offset-2 text-base font-medium px-5 py-2.5 mt-12 text-white gap-2 w-full justify-center md:w-auto"
+                        className="inline-flex items-center gap-1 text-[#27272ae6] group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900  shadow-xl shadow-black/20 ring-1 [&:not(:focus)]:ring-inset ring-gray-700/30 hover:bg-gray-700/70 focus:ring-gray-600 focus:ring-offset-2 text-base font-medium px-5 py-2.5 mt-12 text-white gap-2 w-full justify-center md:w-auto"
                         type="submit"
-                        style={{ backgroundColor: "#27272ae6 !important" }}
+                        // style={{ backgroundColor: "#27272ae6 !important" }}
                       >
                         Send mail
                         <svg
