@@ -57,12 +57,6 @@ export default function Page() {
                 </p>
                 <div className="flex flex-col sm:flex-row mt-10 gap-4">
                   <Link
-                    className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900 bg-gray-50 text-gray-950 shadow-xl shadow-black/20 hover:bg-gray-300 focus:ring-1 ring-gray-300 focus:ring-offset-2 text-base font-medium px-5 py-2.5 justify-center"
-                    href="/my-resume/"
-                  >
-                    Download Resume
-                  </Link>
-                  <Link
                     className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900  shadow-xl shadow-black/20 ring-1 [&amp;:not(:focus)]:ring-inset ring-gray-700/30 hover:bg-gray-700/70 focus:ring-gray-600 focus:ring-offset-2 text-base font-medium px-5 py-2.5 justify-center !text-white"
                     href="/contact/"
                     style={{ background: "rgba(39, 39, 42, .9)" }}
@@ -767,28 +761,7 @@ export default function Page() {
                           <path d="M8 7l9 0l0 9"></path>
                         </svg>
                       </a>
-                      {/* <a
-                        className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900 bg-gray-50/10 text-white shadow-lg shadow-black/20 sm:backdrop-blur-sm group-hover/button:bg-gray-50/15 group-hover/button:scale-105 focus-visible:ring-1 focus-visible:ring-offset-2 ring-gray-50/60 text-sm font-medium px-4 py-2"
-                        href="https://github.com/blenderskool/blaze"
-                        target="_blank"
-                      >
-                        GitHub
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="w-4 h-4 group-hover/button:translate-x-px group-hover/button:-translate-y-px transition-transform"
-                        >
-                          <path d="M17 7l-10 10"></path>
-                          <path d="M8 7l9 0l0 9"></path>
-                        </svg>
-                      </a> */}
+                   
                     </div>
                   </div>
                   <div className="relative z-20 lg:mix-blend-luminosity group-hover:mix-blend-normal min-w-[560px] max-w-[560px] min-h-[329.45px] max-h-[329.45px]">

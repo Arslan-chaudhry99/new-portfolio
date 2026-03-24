@@ -168,33 +168,7 @@ const Menu = () => {
                       </Link>
                     </nav>
                     <nav className="flex pr-9 pl-3">
-                      <a
-                        href="https://twitter.com/blenderskool"
-                        className="px-3 lg:px-2.5 py-3 relative transition duration-500 hover:text-highlight focus:text-highlight ring-inset text-gray-300"
-                        aria-label="Twitter profile"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={
-                          {
-                            "--highlight-color": "rgb(14, 165, 233)" as string,
-                          } as React.CSSProperties
-                        }
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="tabler-icon tabler-icon-brand-twitter"
-                        >
-                          <path d="M22 4.01c-1 .49-1.98 .689-3 .99-1.121-1.265-2.783-1.335-4.38-.737s-2.643 2.06-2.62 3.737v1c-3.245 .083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"></path>
-                        </svg>
-                      </a>
+                   
                       <a
                         href="https://github.com/Arslan-chaudhry99/"
                         className="px-3 lg:px-2.5 py-3 relative transition duration-500 hover:text-highlight focus:text-highlight ring-inset text-gray-300"
@@ -327,52 +301,7 @@ const Menu = () => {
                 style={{ background: "rgba(39, 39, 42, .9)" }}
                 className="pointer-events-auto hidden md:inline-flex ml-4  items-center px-3 h-11 text-sm rounded-full font-medium shadow-xl shadow-black/20 ring-1 ring-inset ring-gray-700/30 backdrop-blur-md"
               >
-                <a
-                  href="https://twitter.com/blenderskool"
-                  style={
-                    {
-                      "--highlight-color": "rgb(14, 165, 233)" as string,
-                    } as React.CSSProperties
-                  }
-                  className={`px-3 lg:px-2.5 py-3 relative transition duration-500 hover:text-highlight focus:text-highlight ring-inset ${
-                    activeBtn === 1 ? "text-[#0ea5e9]" : "text-gray-300"
-                  }`}
-                  aria-label="Twitter profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onMouseEnter={() => {
-                    setActiveBtn(1);
-                  }}
-                  onMouseLeave={() => {
-                    setActiveBtn(0);
-                  }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="tabler-icon tabler-icon-brand-twitter"
-                  >
-                    <path d="M22 4.01c-1 .49-1.98 .689-3 .99-1.121-1.265-2.783-1.335-4.38-.737s-2.643 2.06-2.62 3.737v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z"></path>
-                  </svg>
-                  {activeBtn === 1 && (
-                    <div
-                      className="hidden md:block absolute inset-x-0 bottom-0 h-px bg-highlight"
-                      style={{
-                        maskImage:
-                          "linear-gradient(to right, transparent, black, transparent)",
-                        opacity: 0.5,
-                        background: "#0ea5e9",
-                      }}
-                    ></div>
-                  )}
-                </a>
+              
 
                 <a
                   href="https://github.com/Arslan-chaudhry99/"

@@ -2,7 +2,11 @@
 import Link from "next/link";
 import React from "react";
 
+const START_YEAR = 2021;
+
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <footer
@@ -31,7 +35,9 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row items-center gap-4 justify-between container mx-auto px-8 2xl:px-32 relative text-gray-400 text-sm">
           <div className="tracking-wide flex space-x-1.5">
             <span>©</span>
-            <span>2021&nbsp;&nbsp;–&nbsp;&nbsp;present</span>
+            <span>
+              {START_YEAR}&nbsp;&nbsp;–&nbsp;&nbsp;{currentYear}
+            </span>
             <span>Arslan Chaudhry.</span>
           </div>
           <nav className="-order-1 lg:order-1 flex flex-wrap justify-center font-medium">
