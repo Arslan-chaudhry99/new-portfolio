@@ -85,8 +85,8 @@ export default function BlogPostPage({ params }: Props) {
               </div>
 
               <div
-                className="rounded-2xl ring-1 ring-inset ring-gray-700/30 p-8 sm:p-10 relative overflow-hidden"
-                style={{ background: "rgba(39, 39, 42, .9)" }}
+                className=""
+                // style={{ background: "rgba(39, 39, 42, .9)" }}
               >
                 <div className="absolute inset-0 bg-dots fade-y opacity-50 pointer-events-none" />
                 <div className="relative">
