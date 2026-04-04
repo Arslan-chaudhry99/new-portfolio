@@ -1,10 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Menu from "../../components/Menu";
 import Footer from "../../components/Footer";
 import BlogBody from "../../components/BlogBody";
+import BlogCoverImage from "../../components/BlogCoverImage";
 import { blogPosts, getPostBySlug } from "../posts";
 
 type Props = { params: { slug: string } };
@@ -74,15 +74,13 @@ export default function BlogPostPage({ params }: Props) {
               </header>
 
               <div className="relative rounded-2xl overflow-hidden ring-1 ring-inset ring-gray-700/30 mb-12 aspect-[21/9] max-h-72">
-                <Image
-                  fill
+                <BlogCoverImage
                   src={post.cover}
                   alt={post.coverAlt}
-                  className="object-cover"
                   priority
                   sizes="(min-width: 1024px) 48rem, 100vw"
                 />
-                <div className="absolute inset-0 bg-dots fade-y opacity-40 pointer-events-none" />
+                <div className="absolute inset-0 z-[3] bg-dots fade-y opacity-40 pointer-events-none" />
               </div>
 
               <div

@@ -20,8 +20,8 @@ export const blogPosts: BlogPost[] = [
     slug: "ai-custom-software-real-estate-2026",
     title:
       "3 Ways AI & Custom Software are Redefining Real Estate in 2026",
-    date: "April 4, 2026",
-    dateIso: "2026-04-04",
+    date: "February 18, 2026",
+    dateIso: "2026-02-18",
     readTime: "4 min read",
     excerpt:
       "The real estate market is faster than ever. While most agents are still manually sorting through emails and updating spreadsheets, the top 1% are using a \"secret weapon\": Custom Automation.",

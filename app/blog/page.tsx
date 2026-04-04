@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import BlogCoverImage from "../components/BlogCoverImage";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { blogPosts } from "./posts";
@@ -56,15 +56,14 @@ export default function BlogIndexPage() {
                         </div>
                       </div>
                       <div className="relative h-48 w-full overflow-hidden border-t border-gray-700/30">
-                        <Image
-                          fill
+                        <BlogCoverImage
                           src={post.cover}
                           alt={post.coverAlt}
-                          className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
                           sizes="(min-width: 768px) 50vw, 100vw"
+                          imageClassName="group-hover:scale-[1.03]"
                         />
                         <div
-                          className="absolute inset-0 bg-gradient-to-t from-[#1b1b1e] via-transparent to-transparent pointer-events-none"
+                          className="absolute inset-0 z-[3] bg-gradient-to-t from-[#1b1b1e] via-transparent to-transparent pointer-events-none"
                           aria-hidden
                         />
                       </div>
