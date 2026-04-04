@@ -154,12 +154,12 @@ const Menu = () => {
                       >
                         Projects
                       </Link>
-                      {/* <Link
-                        href="/blogs/"
+                      <Link
+                        href="/blog/"
                         className="px-6 lg:px-3.5 py-3 relative transition duration-500 hover:text-highlight focus:text-highlight ring-inset undefined"
                       >
-                        Blogs
-                      </Link> */}
+                        Blog
+                      </Link>
                       <Link
                         href="/contact"
                         className="px-6 lg:px-3.5 py-3 relative transition duration-500 hover:text-highlight focus:text-highlight ring-inset undefined"
@@ -275,8 +275,27 @@ const Menu = () => {
                     ></div>
                   )}
                 </Link>
-             
-
+                <Link
+                  href="/blog/"
+                  className={`px-6 lg:px-3.5 py-3 relative transition duration-500 hover:text-highlight focus:text-highlight ring-inset undefined  ${
+                    pathname === "/blog" || pathname.startsWith("/blog/")
+                      ? "text-[#f472b6]"
+                      : "text-gray-300"
+                  }`}
+                >
+                  Blog
+                  {(pathname === "/blog" || pathname.startsWith("/blog/")) && (
+                    <div
+                      className="hidden md:block absolute inset-x-0 bottom-0 h-px bg-highlight"
+                      style={{
+                        maskImage:
+                          "linear-gradient(to right, transparent, black, transparent)",
+                        opacity: 0.5,
+                        background: "#f472b6",
+                      }}
+                    ></div>
+                  )}
+                </Link>
                 <Link
                   href="/contact/"
                   className={`px-6 lg:px-3.5 py-3 relative transition duration-500 hover:text-highlight focus:text-highlight ring-inset undefined  ${

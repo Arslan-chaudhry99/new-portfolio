@@ -53,13 +53,12 @@ const Footer = () => {
             >
               Projects
             </Link>
-            {/* <Link
-              href="/blogs/"
+            <Link
+              href="/blog/"
               className="hover:text-sky-400 hover:underline underline-offset-4 transition px-3.5 py-3"
             >
               Blog
-            </Link> */}
-
+            </Link>
             <Link
               href="/contact/"
               className="hover:text-sky-400 hover:underline underline-offset-4 transition px-3.5 py-3"
