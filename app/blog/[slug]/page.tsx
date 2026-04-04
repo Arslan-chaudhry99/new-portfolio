@@ -75,9 +75,10 @@ export default function BlogPostPage({ params }: Props) {
 
               <div className="relative rounded-2xl overflow-hidden ring-1 ring-inset ring-gray-700/30 mb-12 aspect-[21/9] max-h-72">
                 <Image
+                  fill
                   src={post.cover}
                   alt={post.coverAlt}
-                  className="object-cover w-full h-full"
+                  className="object-cover"
                   priority
                   sizes="(min-width: 1024px) 48rem, 100vw"
                 />

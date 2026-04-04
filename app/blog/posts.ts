@@ -1,5 +1,7 @@
 import type { StaticImageData } from "next/image";
-import thumbCover from "../assess/imgs/thumbnail.webp";
+
+/** Local path under /public or imported image */
+export type BlogCover = StaticImageData | string;
 
 export type BlogPost = {
   slug: string;
@@ -8,7 +10,7 @@ export type BlogPost = {
   dateIso: string;
   readTime: string;
   excerpt: string;
-  cover: StaticImageData;
+  cover: BlogCover;
   coverAlt: string;
   body: string;
 };
@@ -23,7 +25,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     excerpt:
       "The real estate market is faster than ever. While most agents are still manually sorting through emails and updating spreadsheets, the top 1% are using a \"secret weapon\": Custom Automation.",
-    cover: thumbCover,
+    cover: "/blog/real_estate.jpg",
     coverAlt: "Real estate and technology",
     body: `The real estate market is faster than ever. While most agents are still manually sorting through emails and updating spreadsheets, the top 1% are using a "secret weapon": Custom Automation.
 

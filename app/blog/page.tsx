@@ -57,9 +57,10 @@ export default function BlogIndexPage() {
                       </div>
                       <div className="relative h-48 w-full overflow-hidden border-t border-gray-700/30">
                         <Image
+                          fill
                           src={post.cover}
                           alt={post.coverAlt}
-                          className="object-cover w-full h-full group-hover:scale-[1.03] transition-transform duration-300"
+                          className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
                           sizes="(min-width: 768px) 50vw, 100vw"
                         />
                         <div
