@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Always light text: site is dark-themed regardless of OS appearance */
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 24, 24, 27;
+  --background-end-rgb: 24, 24, 27;
   --tw-gradient-from: #facc15;
   --tw-gradient-to: #0ea5e9;
   --tw-gradient-stops: var(--tw-gradient-from), #34d399, var(--tw-gradient-to);
@@ -13,12 +14,8 @@
   --bgColor:"rgba(39, 39, 42, .9)"
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  color-scheme: dark;
 }
 * {
   user-select: text;
@@ -39,6 +36,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: inherit;
   margin: 0;
+}
+
+/* Autofill / UA styles often force black text on dark pages */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f4f4f5 !important;
+  caret-color: #f4f4f5;
 }
 button{
   background-color: var(--bgColor) !important;
