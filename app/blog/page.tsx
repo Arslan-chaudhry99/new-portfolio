@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import BlogCoverImage from "../components/BlogCoverImage";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { blogPosts } from "./posts";
+
+export const metadata: Metadata = {
+  title: "Blog · Digital Studio",
+  description:
+    "Web development articles, JavaScript tutorials, industry insights, and case studies.",
+};
 
 export default function BlogIndexPage() {
   return (
@@ -12,8 +19,11 @@ export default function BlogIndexPage() {
         <main className="relative min-h-screen">
           <section className="md:h-screen-1/2 pt-40 pb-20 md:pt-40 md:pb-20 px-8 2xl:px-32 flex flex-col items-center justify-center text-center">
             <h1 className="text-5xl font-semibold tracking-tight leading-tight text-gray-100">
-              Blogs
+              Insights
             </h1>
+            <p className="mt-7 text-lg leading-relaxed font-medium text-gray-400 max-w-2xl">
+              Web development articles, JavaScript tutorials, industry insights, and case studies.
+            </p>
          
           </section>
 
