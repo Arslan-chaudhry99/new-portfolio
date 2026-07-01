@@ -41,21 +41,18 @@ export default function Page() {
 
         <main className="relative min-h-screen">
           {/* Hero */}
-          <section className="relative min-h-[75vh] flex flex-col lg:flex-row items-start lg:items-center lg:justify-between pt-16 container mx-auto px-8 xl:px-32 overflow-x-hidden">
-            <div className="max-w-2xl">
-              <h1 className="mt-2 font-semibold tracking-tight text-gray-100 text-4xl md:text-5xl leading-tight md:leading-tight">
+          <section className="relative container mx-auto h-[100dvh] min-h-[600px] max-h-[900px] flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6 lg:gap-10 px-8 xl:px-32 pt-24 pb-8 box-border overflow-hidden">
+            <div className="w-full lg:w-[48%] xl:max-w-xl shrink-0 order-2 lg:order-1">
+              <h1 className="font-semibold tracking-tight text-gray-100 text-3xl sm:text-4xl md:text-5xl leading-tight">
                 {homeHero.heading.split(" ").slice(0, 2).join(" ")}{" "}
                 <span className="gradient-text bg-clip-text font-semibold">
                   {homeHero.heading.split(" ").slice(2).join(" ")}
                 </span>
               </h1>
-              <p className="mt-7 text-lg leading-relaxed font-medium text-gray-400 max-w-xl">
+              <p className="mt-5 sm:mt-6 text-base sm:text-lg leading-relaxed font-medium text-gray-400 max-w-lg">
                 {homeHero.subheading}
               </p>
-              <p className="mt-4 text-base leading-relaxed font-medium text-gray-500 max-w-xl">
-                {homeHero.description}
-              </p>
-              <div className="flex flex-col sm:flex-row mt-10 gap-4">
+              <div className="flex flex-col sm:flex-row mt-7 sm:mt-8 gap-4">
                 <Link
                   className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900 bg-gray-50 text-gray-950 shadow-xl shadow-black/20 hover:bg-gray-300 focus:ring-1 ring-gray-300 focus:ring-offset-2 text-base font-medium px-5 py-2.5 justify-center"
                   href={homeHero.primaryCta.href}
@@ -71,18 +68,22 @@ export default function Page() {
                 </Link>
               </div>
             </div>
-            <div className="p-10 lg:p-20 flex-shrink-0 -ml-8 lg:ml-0 lg:-mr-20 relative -order-1 lg:order-1">
-              <div className="absolute inset-0 bg-dots [mask-image:radial-gradient(black_55%,transparent_75%)] rounded-full" />
-              <div className="absolute inset-0 [mask-image:radial-gradient(black_42%,transparent_57%)] rounded-full">
-                <div className="absolute inset-6 lg:inset-12 highlight mask-dots rounded-full" />
-              </div>
-              <div className="gatsby-image-wrapper gatsby-image-wrapper-constrained relative w-72 h-72 rounded-full border-8 border-gray-900 bg-gray-900 overflow-hidden">
-                <Image
-                  src={arslan22}
-                  alt={AGENCY_NAME}
-                  className="w-full h-full object-cover object-top"
-                  style={{ width: 284, height: 284 }}
-                />
+            <div className="w-full lg:w-[52%] h-[38vh] sm:h-[42vh] lg:h-full lg:max-h-[calc(100dvh-8rem)] min-h-0 flex items-center justify-center lg:justify-end order-1 lg:order-2 overflow-hidden">
+              <div className="relative h-full max-h-full aspect-square w-auto max-w-full overflow-hidden">
+                <div className="absolute inset-0 bg-dots [mask-image:radial-gradient(black_55%,transparent_75%)] rounded-full pointer-events-none" />
+                <div className="absolute inset-0 [mask-image:radial-gradient(black_42%,transparent_57%)] rounded-full pointer-events-none">
+                  <div className="absolute inset-[12%] highlight mask-dots rounded-full" />
+                </div>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/assess/glob_image.png"
+                    alt="Global digital solutions"
+                    fill
+                    className="object-contain drop-shadow-2xl"
+                    priority
+                    sizes="(max-width: 640px) 70vw, (max-width: 1024px) 45vw, 520px"
+                  />
+                </div>
               </div>
             </div>
           </section>

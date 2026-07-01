@@ -13,9 +13,7 @@ export const navLinks = [
 export const homeHero = {
   heading: "Building Exceptional Digital Experiences for Modern Businesses",
   subheading:
-    "We are a full-service digital studio specializing in web development, mobile applications, and immersive 3D solutions. From startup ideas to enterprise platforms, we transform concepts into scalable, high-performing digital products.",
-  description:
-    "Our team leverages modern JavaScript technologies and creative 3D expertise to deliver innovative solutions that help businesses grow, engage audiences, and stand out in a competitive digital landscape.",
+    "A full-service studio for web, mobile, and 3D — we turn ideas into scalable products that help businesses grow and stand out.",
   primaryCta: { label: "Start Your Project", href: "/contact" },
   secondaryCta: { label: "View Our Work", href: "/portfolio" },
 };
