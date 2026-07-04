@@ -3,15 +3,25 @@
 @tailwind utilities;
 
 :root {
-  /* Always light text: site is dark-themed regardless of OS appearance */
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 24, 24, 27;
-  --background-end-rgb: 24, 24, 27;
-  --tw-gradient-from: #facc15;
-  --tw-gradient-to: #0ea5e9;
-  --tw-gradient-stops: var(--tw-gradient-from), #34d399, var(--tw-gradient-to);
-  --highlight-color: "#22c55e";
-  --bgColor:"rgba(39, 39, 42, .9)"
+  --background: #08111F;
+  --surface: #0D1626;
+  --surface-2: #1A2435;
+
+  --primary: #1976FF;
+  --primary-light: #38B6FF;
+
+  --text: #F8FAFC;
+  --text-secondary: #C7CED8;
+  --text-muted: #7D8797;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --gradient: linear-gradient(135deg, #1976FF 0%, #38B6FF 100%);
+
+  --foreground-rgb: 248, 250, 252;
+  --highlight-color: #1976FF;
+  --bgColor: var(--surface);
+  --card-bg: var(--surface);
 }
 
 html {
@@ -27,8 +37,8 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(24 24 27/1);
+  color: var(--text);
+  background-color: var(--background);
   font-family: GeneralSans, ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
@@ -46,14 +56,14 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  -webkit-text-fill-color: #f4f4f5 !important;
-  caret-color: #f4f4f5;
+  -webkit-text-fill-color: var(--text) !important;
+  caret-color: var(--text);
 }
 button{
   background-color: var(--bgColor) !important;
 }
 *,:after,:before {
-  border: 0 solid #e4e4e7;
+  border: 0 solid var(--border);
   box-sizing: border-box;
 }
 @layer utilities {
@@ -74,11 +84,7 @@ button{
 }
 
 .gradient-text {
-  --tw-gradient-from: #facc15;
-  --tw-gradient-to: #0ea5e9;
-  --tw-gradient-stops: var(--tw-gradient-from), #34d399, var(--tw-gradient-to);
-
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  background-image: var(--gradient);
   background-size: 200% 200%;
   animation: gradient-x 8s ease infinite;
   color: transparent;
@@ -107,8 +113,8 @@ button{
   mask-image: linear-gradient(0deg,transparent,#fff)
 }
 .bg-dots {
-  background-image: radial-gradient(rgba(63,63,70,.8) 10%,transparent 0);
-  background-size: 8px 8px
+  background-image: radial-gradient(rgba(25, 118, 255, 0.12) 10%, transparent 0);
+  background-size: 8px 8px;
 }
 
 .fade-t-ease {
@@ -267,7 +273,7 @@ button{
   --tw-backdrop-sepia:
 }
 *,:after,:before {
-  border: 0 solid #e4e4e7;
+  border: 0 solid var(--border);
   box-sizing: border-box;
 }
 ::backdrop {

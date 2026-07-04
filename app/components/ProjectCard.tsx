@@ -52,22 +52,22 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
         setTranslate({ x: 0, y: 0 });
       }}
     >
-      <div className="p-px lg:h-full rounded-2xl relative overflow-hidden bg-gray-700/30 shadow-md hover:shadow-2xl transition group">
+      <div className="p-px lg:h-full rounded-2xl relative overflow-hidden bg-surface-2/80 shadow-md hover:shadow-2xl transition group">
         <div
-          className="absolute opacity-[0.4] h-full hidden aspect-square bg-gradient-to-c from-sky-500 to-transparent to-70% -top-1/2 -left-1/2"
+          className="absolute opacity-[0.4] h-full hidden aspect-square bg-gradient-to-c from-primary to-transparent to-70% -top-1/2 -left-1/2"
           style={gradientStyle}
         />
-        <div className="bg-[#1b1b1e] group-hover:bg-[#1d1d20] transition-colors relative rounded-2xl h-full">
+        <div className="bg-surface-2 group-hover:bg-[#1d1d20] transition-colors relative rounded-2xl h-full">
           <div className="absolute inset-0 bg-dots fade-y opacity-40" />
           <div
-            className="absolute h-full opacity-[0.07] hidden aspect-square bg-gradient-to-c from-sky-500 to-transparent to-70% -top-1/2 -left-1/2"
+            className="absolute h-full opacity-[0.07] hidden aspect-square bg-gradient-to-c from-primary to-transparent to-70% -top-1/2 -left-1/2"
             style={gradientStyle}
           />
           <div className="relative p-8 h-full flex flex-col">
             <div className="flex justify-between">
               <time
                 dateTime="2023-05-25"
-                className="font-medium text-gray-400 text-sm"
+                className="font-medium text-muted text-sm"
               >
                 {project.date}
               </time>
@@ -78,12 +78,12 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
                 {project.title}
               </span>
               {project.tag && (
-                <div className="shadow-[0_1px_inset_rgba(255,255,255,0.05),0_1px_1px_rgba(0,0,0,0.2)] text-xs tracking-wide font-medium bg-green-600 text-white transition-colors px-2 py-1 rounded-full">
+                <div className="shadow-[0_1px_inset_rgba(255,255,255,0.05),0_1px_1px_rgba(0,0,0,0.2)] text-xs tracking-wide font-medium bg-primary text-foreground transition-colors px-2 py-1 rounded-full">
                   {project.tag}
                 </div>
               )}
             </h3>
-            <p className="text-gray-400 font-medium text-sm mt-3 mb-6 leading-relaxed tracking-wide">
+            <p className="text-muted font-medium text-sm mt-3 mb-6 leading-relaxed tracking-wide">
               {project.description}
             </p>
             <ul
@@ -93,7 +93,7 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
               {project.tags.map((tag) => (
                 <li
                   key={tag}
-                  className="shadow-[0_1px_inset_rgba(255,255,255,0.05),0_1px_1px_rgba(0,0,0,0.2)] text-xs tracking-wide font-medium bg-gray-700/20 text-gray-400 sm:group-hover:bg-gray-50/5 sm:group-hover:text-gray-300 transition-colors px-3 py-1 rounded-md"
+                  className="shadow-[0_1px_inset_rgba(255,255,255,0.05),0_1px_1px_rgba(0,0,0,0.2)] text-xs tracking-wide font-medium bg-surface-2/60 text-muted sm:group-hover:bg-foreground/5 sm:group-hover:text-secondary transition-colors px-3 py-1 rounded-md"
                 >
                   {tag}
                 </li>
@@ -105,7 +105,7 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
             >
               {project.preview && (
                 <a
-                  className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900 bg-gray-50 text-gray-950 shadow-xl shadow-black/20 hover:bg-gray-300 focus:ring-1 ring-gray-300 focus:ring-offset-2 text-sm font-medium px-4 py-2 pointer-events-auto"
+                  className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-background bg-foreground text-background shadow-xl shadow-background/40 hover:opacity-90 focus:ring-1 ring-primary-light focus:ring-offset-2 text-sm font-medium px-4 py-2 pointer-events-auto"
                   href={project.preview}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -131,11 +131,10 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
               )}
               {project.github && (
                 <a
-                  className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900 shadow-xl shadow-black/20 ring-1 [&:not(:focus)]:ring-inset ring-gray-700/30 hover:bg-gray-700/70 focus:ring-gray-600 focus:ring-offset-2 text-sm font-medium px-4 py-2 pointer-events-auto"
+                  className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-background shadow-xl shadow-background/40 ring-1 [&:not(:focus)]:ring-inset ring-brand-border hover:bg-surface-2 focus:ring-primary/50 focus:ring-offset-2 text-sm font-medium px-4 py-2 pointer-events-auto"
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ background: "rgba(39, 39, 42, .9)" }}
                 >
                   GitHub
                   <svg

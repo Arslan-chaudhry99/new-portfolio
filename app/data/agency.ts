@@ -1,104 +1,87 @@
 export const AGENCY_NAME = "Digital Studio";
 
 export const navLinks = [
-  { href: "/", label: "Home", color: "#0ea5e9" },
-  { href: "/services", label: "Services", color: "#10b981" },
-  { href: "/portfolio", label: "Portfolio", color: "#34d399" },
-  { href: "/technologies", label: "Technologies", color: "#f472b6" },
-  { href: "/about", label: "About", color: "#a78bfa" },
-  { href: "/blog", label: "Blog", color: "#f472b6" },
-  { href: "/contact", label: "Contact", color: "#a78bfa" },
+  { href: "/", label: "Home", color: "#1976FF" },
+  { href: "/services", label: "Services", color: "#1976FF" },
+  { href: "/blog", label: "Blog", color: "#38B6FF" },
+  { href: "/contact", label: "Contact", color: "#1976FF" },
 ] as const;
 
 export const homeHero = {
   heading: "Building Exceptional Digital Experiences for Modern Businesses",
   subheading:
     "A full-service studio for web, mobile, and 3D — we turn ideas into scalable products that help businesses grow and stand out.",
-  primaryCta: { label: "Start Your Project", href: "/contact" },
-  secondaryCta: { label: "View Our Work", href: "/portfolio" },
+  cta: { label: "Let's get in touch", href: "/contact" },
+};
+
+export const clientLogos = {
+  heading: "Trusted by our Leading Clientele",
+  brands: [
+    {
+      name: "ZERO CHEATING",
+      src: "/assess/Companies/logo-DOQpZjhz.svg",
+      monochrome: true,
+    },
+    {
+      name: "AL KHALIL",
+      src: "/assess/Companies/majam_fund.png",
+    },
+    // {
+    //   name: "Buraq",
+    //   src: "/assess/Companies/wanya.png",
+    // },
+   
+    {
+      name: "6-PACK MACROS",
+      src: "/assess/Companies/download.png",
+    },
+  ],
+};
+
+export const servicesSection = {
+  heading: "Services",
+  subheading:
+    "Silicon level delivery from ideation to digital solutions that solve your business problems in a secure and scalable manner.",
+  cta: { label: "Explore services", href: "/services" },
 };
 
 export const servicesOverview = [
   {
-    title: "Web Development",
+    title: "Web Development Services",
     description:
-      "Modern, responsive, and scalable websites and web applications built using cutting-edge JavaScript technologies. We create digital experiences that are fast, secure, and designed for growth.",
-    keyServices: [
-      "Custom Website Development",
-      "Full-Stack JavaScript Applications",
-      "E-commerce Solutions",
-      "CMS Development",
-      "API Integrations",
-      "Performance Optimization",
-    ],
-    highlightColor: "#0ea5e9",
+      "Transform your ideas into reality with our cutting-edge web development services.",
+    icon: "web" as const,
+    href: "/services#service-web-development",
   },
   {
-    title: "App Development",
+    title: "App Development Services",
     description:
-      "Cross-platform mobile applications that deliver seamless user experiences across Android and iOS devices.",
-    keyServices: [
-      "Mobile App Development",
-      "Cross-Platform Applications",
-      "UI/UX Implementation",
-      "Backend Integration",
-      "Real-Time Applications",
-      "Maintenance & Support",
-    ],
-    highlightColor: "#10b981",
+      "Build powerful mobile experiences with cross-platform apps designed for performance and scale.",
+    icon: "app" as const,
+    href: "/services#service-app-development",
   },
   {
-    title: "3D Development",
+    title: "3D Development Services",
     description:
-      "Creative and immersive 3D solutions that bring products, brands, and ideas to life.",
-    keyServices: [
-      "3D Modeling",
-      "3D Rigging",
-      "3D Animations",
-      "CGI Advertisements",
-      "Environment Design",
-    ],
-    highlightColor: "#a78bfa",
+      "Bring products and brands to life with immersive 3D modeling, animation, and CGI.",
+    icon: "3d" as const,
+    href: "/services#service-3d-development",
+  },
+  {
+    title: "Video Editing & Graphics Services",
+    description:
+      "Polished video content and creative graphics for campaigns, product launches, and social media that capture attention.",
+    icon: "video" as const,
+    href: "/services#service-video-graphics",
+  },
+  {
+    title: "SEO & Digital Marketing Services",
+    description:
+      "Grow your reach with data-driven SEO, content strategy, and digital marketing campaigns.",
+    icon: "seo" as const,
+    href: "/services#service-seo-marketing",
   },
 ];
-
-export const technologies = {
-  heading: "Powered by Modern JavaScript Technologies",
-  description:
-    "We utilize industry-leading technologies and development practices to build reliable, scalable, and future-ready digital products.",
-  categories: [
-    {
-      title: "Frontend",
-      items: [
-        "React.js",
-        "Next.js",
-        "JavaScript (ES6+)",
-        "TypeScript",
-        "HTML5",
-        "CSS3",
-        "Tailwind CSS",
-      ],
-    },
-    {
-      title: "Backend",
-      items: [
-        "Node.js",
-        "Express.js",
-        "REST APIs",
-        "GraphQL",
-        "Socket.io",
-      ],
-    },
-    {
-      title: "Database & Cloud",
-      items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
-    },
-    {
-      title: "Development Tools",
-      items: ["Git", "GitHub", "Vite", "Prisma", "Figma"],
-    },
-  ],
-};
 
 export const featuredProjects = [
   {
@@ -106,46 +89,28 @@ export const featuredProjects = [
     description:
       "A scalable web application designed to streamline operations, automate workflows, and improve productivity through real-time analytics and intuitive dashboards.",
     category: "Web Application",
-    highlightColor: "#0ea5e9",
+    highlightColor: "#1976FF",
   },
   {
     title: "E-Commerce Marketplace",
     description:
       "A high-performance online platform featuring secure payments, inventory management, and a seamless shopping experience across devices.",
     category: "Web Development",
-    highlightColor: "#10b981",
+    highlightColor: "#38B6FF",
   },
   {
     title: "On-Demand Mobile Application",
     description:
       "A cross-platform mobile solution connecting users with services through real-time notifications, location tracking, and intuitive user experiences.",
     category: "Mobile Application",
-    highlightColor: "#34d399",
+    highlightColor: "#38B6FF",
   },
   {
     title: "CGI Product Campaign",
     description:
       "A visually immersive 3D advertising campaign that transformed product presentations through cinematic animations and high-quality visual storytelling.",
     category: "3D Development",
-    highlightColor: "#a78bfa",
-  },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Their team transformed our vision into a modern digital platform that exceeded our expectations. Professional, responsive, and highly skilled.",
-    author: "Sarah Thompson",
-  },
-  {
-    quote:
-      "From planning to deployment, the entire process was seamless. The quality of work and attention to detail were exceptional.",
-    author: "Michael Anderson",
-  },
-  {
-    quote:
-      "Their expertise in web technologies and 3D solutions helped us launch a product experience that truly stood out in the market.",
-    author: "Daniel Carter",
+    highlightColor: "#1976FF",
   },
 ];
 
@@ -159,270 +124,354 @@ export const homeCta = {
 
 export const servicesPage = {
   hero: {
-    heading: "Digital Solutions Designed for Growth",
-    subheading:
-      "From modern websites and mobile applications to immersive 3D experiences, we create scalable, high-performing solutions that help businesses innovate, engage, and grow.",
-  },
-  services: [
-    {
-      title: "Web Development That Performs",
-      description:
-        "We design and develop modern websites and web applications using the latest JavaScript technologies. Our solutions are built for speed, scalability, security, and exceptional user experiences across all devices.",
-      offerings: [
-        "Custom Website Development",
-        "Full-Stack JavaScript Applications",
-        "Single Page Applications (SPA)",
-        "E-Commerce Development",
-        "CMS Development",
-        "API Integration & Development",
-        "Progressive Web Apps (PWA)",
-        "Website Optimization & Maintenance",
-      ],
-      technologies:
-        "React.js • Next.js • Node.js • Express.js • TypeScript • MongoDB • PostgreSQL • Tailwind CSS",
-      highlightColor: "#0ea5e9",
-    },
-    {
-      title: "Mobile Experiences That Connect",
-      description:
-        "We build high-quality cross-platform mobile applications that deliver seamless performance and intuitive user experiences. From concept to deployment, we develop apps that are reliable, scalable, and designed to grow with your business.",
-      offerings: [
-        "Cross-Platform App Development",
-        "Android & iOS Applications",
-        "UI/UX Implementation",
-        "Backend & API Integration",
-        "Real-Time Applications",
-        "App Performance Optimization",
-        "Maintenance & Support",
-        "App Store Deployment Assistance",
-      ],
-      technologies:
-        "React Native • JavaScript • TypeScript • Node.js • Firebase • MongoDB • REST APIs • Socket.io",
-      highlightColor: "#10b981",
-    },
-    {
-      title: "Immersive 3D Experiences That Captivate",
-      description:
-        "We create visually stunning 3D assets and digital experiences that elevate brands, products, and marketing campaigns. Our creative team combines technical expertise with artistic vision to deliver high-quality visual solutions.",
-      offerings: [
-        "3D Modeling",
-        "3D Rigging",
-        "3D Animations",
-        "CGI Advertisements",
-        "Environment Design",
-        "Product Visualization",
-        "Motion Graphics",
-        "Interactive 3D Experiences",
-      ],
-      deliverables:
-        "Product Renders • Animated Videos • CGI Commercials • Virtual Environments • Marketing Assets",
-      highlightColor: "#a78bfa",
-    },
-  ],
-  process: [
-    {
-      step: "01",
-      title: "Discovery",
-      description:
-        "We understand your business goals, requirements, target audience, and project vision.",
-    },
-    {
-      step: "02",
-      title: "Strategy & Planning",
-      description:
-        "We create a roadmap, define technical requirements, and establish project milestones.",
-    },
-    {
-      step: "03",
-      title: "Design & Development",
-      description:
-        "Our team designs and develops your solution using modern technologies and best practices.",
-    },
-    {
-      step: "04",
-      title: "Testing & Optimization",
-      description:
-        "Every feature is thoroughly tested for performance, security, and reliability.",
-    },
-    {
-      step: "05",
-      title: "Launch & Support",
-      description:
-        "We deploy your project and provide ongoing support, updates, and maintenance.",
-    },
-  ],
-  pricing: {
-    heading: "Flexible Pricing Built Around Your Needs",
+    heading: "Join today to build products, grow faster, and stand out online!",
     description:
-      "Every project is unique, so our pricing is tailored according to your goals, requirements, features, and timeline.",
-    models: [
+      "Partner with a full-service digital studio for web, mobile, and 3D — from idea to launch, we help modern businesses create experiences that convert.",
+    cta: { label: "Join Now", href: "/contact" },
+    backgroundImage: "/assess/landing-hero.jpg",
+    socialLabel: "Follow us:",
+    socialLinks: [
       {
-        title: "Fixed Price",
-        description:
-          "Perfect for projects with clearly defined requirements and timelines.",
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/arslan-jameel/",
+        icon: "linkedin" as const,
       },
       {
-        title: "Dedicated Team",
-        description:
-          "A dedicated team working exclusively on your project with complete flexibility and collaboration.",
+        label: "GitHub",
+        href: "https://github.com/Arslan-chaudhry99/",
+        icon: "github" as const,
       },
       {
-        title: "Hourly Engagement",
-        description:
-          "Ideal for ongoing improvements, maintenance, consulting, and evolving project requirements.",
+        label: "Instagram",
+        href: "https://instagram.com/",
+        icon: "instagram" as const,
       },
     ],
-    included: [
-      "Project Consultation",
-      "Strategic Planning",
-      "UI/UX Guidance",
-      "Development & Testing",
-      "Quality Assurance",
-      "Deployment Assistance",
-      "Post-Launch Support",
-    ],
+    clientBadge: {
+      count: "25+",
+      label: "Satisfied Clients With Us",
+    },
   },
-  cta: {
-    heading: "Ready to Start Your Project?",
-    description:
-      "Let's turn your ideas into powerful digital experiences with modern web, mobile, and 3D solutions.",
-    primaryCta: { label: "Start Your Project", href: "/contact" },
-    secondaryCta: { label: "Schedule a Consultation", href: "/contact" },
+  services: {
+    heading:
+      "we craft software using the latest technologies to drive innovation and meet your business needs.",
+    categories: [
+      {
+        id: "web-development",
+        label: "Web Development",
+        number: "01",
+        title: "Web Development Services",
+        description:
+          "Transform your ideas into reality with cutting-edge web applications built for performance, security, and scale.",
+        technologies: [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "PostgreSQL",
+          "GraphQL",
+          "AWS",
+          "Tailwind CSS",
+        ],
+        items: [
+          {
+            id: "web-apps",
+            label: "Web Application Development",
+            content:
+              "Modern, responsive web applications using React, Next.js, and proven backend stacks. We focus on performance, security, and intuitive UX so your users get a fast, reliable experience on every device.",
+          },
+          {
+            id: "custom-software",
+            label: "Custom Software Development",
+            content:
+              "We build tailored software that fits your workflows — from internal tools and dashboards to full-scale platforms. Our team handles architecture, development, and deployment so you get a solution built around your business, not the other way around.",
+          },
+          {
+            id: "ui-ux",
+            label: "UI/UX Design",
+            content:
+              "User-centered design from wireframes to polished interfaces. We combine research, prototyping, and visual design to create experiences that convert and delight.",
+          },
+          {
+            id: "database",
+            label: "Database & API Design",
+            content:
+              "Robust data layers, RESTful and GraphQL APIs, and database optimization for applications that scale with your users.",
+          },
+          {
+            id: "cloud-architecture",
+            label: "Cloud Architecture",
+            content:
+              "We design resilient cloud architectures on AWS, GCP, and Azure — optimized for cost, performance, and high availability.",
+          },
+        ],
+      },
+      {
+        id: "app-development",
+        label: "App Development",
+        number: "02",
+        title: "App Development Services",
+        description:
+          "Build powerful mobile experiences with cross-platform apps designed for performance and scale.",
+        technologies: [
+          "React Native",
+          "Flutter",
+          "Swift",
+          "Kotlin",
+          "Firebase",
+          "Expo",
+          "App Store",
+          "Google Play",
+        ],
+        items: [
+          {
+            id: "mobile-apps",
+            label: "Mobile App Development",
+            content:
+              "Cross-platform and native mobile apps designed for performance and scale. From onboarding flows to push notifications and offline support, we deliver apps your users will love.",
+          },
+          {
+            id: "deployment",
+            label: "App Deployment & Support",
+            content:
+              "We handle CI/CD, cloud hosting, monitoring, and post-launch updates. Your product stays secure, up to date, and ready to grow with your business.",
+          },
+          {
+            id: "devops",
+            label: "DevOps & CI/CD",
+            content:
+              "Automated pipelines, infrastructure as code, and deployment workflows that speed up releases and reduce downtime.",
+          },
+          {
+            id: "qa-testing",
+            label: "QA & Automated Testing",
+            content:
+              "Manual and automated testing across browsers and devices. We catch bugs early and ensure every release meets your quality standards.",
+          },
+          {
+            id: "maintenance",
+            label: "Ongoing Maintenance",
+            content:
+              "Regular updates, dependency management, bug fixes, and feature enhancements to keep your product healthy long after launch.",
+          },
+        ],
+      },
+      {
+        id: "3d-development",
+        label: "3D Development",
+        number: "03",
+        title: "3D Development Services",
+        description:
+          "Bring products and brands to life with immersive 3D modeling, animation, and CGI.",
+        technologies: [
+          "Blender",
+          "Cinema 4D",
+          "Three.js",
+          "Unity",
+          "Unreal Engine",
+          "Maya",
+          "AR / VR",
+          "WebGL",
+        ],
+        items: [
+          {
+            id: "3d-cgi",
+            label: "3D Modeling & CGI",
+            content:
+              "Photorealistic 3D assets, product visualizations, and cinematic animations for marketing, e-commerce, and brand campaigns that capture attention.",
+          },
+          {
+            id: "ar-vr",
+            label: "AR / VR Experiences",
+            content:
+              "Immersive augmented and virtual reality experiences for training, product demos, and interactive storytelling that engage audiences in new ways.",
+          },
+          {
+            id: "ai-integration",
+            label: "AI Integration",
+            content:
+              "Smart features powered by AI — chatbots, recommendations, automation, and custom models integrated into your existing products and workflows.",
+          },
+          {
+            id: "product-viz",
+            label: "Product Visualization",
+            content:
+              "High-fidelity 3D renders and interactive product viewers that help customers explore your offerings before they buy.",
+          },
+        ],
+      },
+      {
+        id: "video-graphics",
+        label: "Video & Graphics",
+        number: "04",
+        title: "Video Editing & Graphics Services",
+        description:
+          "Polished video content and creative graphics for campaigns, product launches, and social media that capture attention.",
+        technologies: [
+          "Adobe Premiere",
+          "After Effects",
+          "DaVinci Resolve",
+          "Photoshop",
+          "Illustrator",
+          "Figma",
+          "Motion Graphics",
+          "Color Grading",
+        ],
+        items: [
+          {
+            id: "video-editing",
+            label: "Video Editing & Post-Production",
+            content:
+              "Professional video editing, color grading, and post-production for commercials, product demos, and brand storytelling.",
+          },
+          {
+            id: "motion-graphics",
+            label: "Motion Graphics",
+            content:
+              "Animated graphics, title sequences, and visual effects that bring your brand message to life across digital channels.",
+          },
+          {
+            id: "social-content",
+            label: "Social Media Content",
+            content:
+              "Short-form video, reels, and platform-optimized creative assets designed to engage audiences and drive conversions.",
+          },
+          {
+            id: "brand-graphics",
+            label: "Brand Graphics & Assets",
+            content:
+              "Campaign visuals, banners, and creative assets that maintain brand consistency across every touchpoint.",
+          },
+        ],
+      },
+      {
+        id: "seo-marketing",
+        label: "SEO & Marketing",
+        number: "05",
+        title: "SEO & Digital Marketing Services",
+        description:
+          "Grow your reach with data-driven SEO, content strategy, and digital marketing campaigns.",
+        technologies: [
+          "Google Analytics",
+          "SEMrush",
+          "Ahrefs",
+          "Google Ads",
+          "Meta Ads",
+          "HubSpot",
+          "Mailchimp",
+          "Content Strategy",
+        ],
+        items: [
+          {
+            id: "seo",
+            label: "Search Engine Optimization",
+            content:
+              "Technical SEO audits, keyword strategy, and on-page optimization to improve rankings and drive organic traffic.",
+          },
+          {
+            id: "content-strategy",
+            label: "Content Strategy",
+            content:
+              "Data-driven content planning, blog production, and editorial calendars that build authority and attract your target audience.",
+          },
+          {
+            id: "digital-campaigns",
+            label: "Digital Marketing Campaigns",
+            content:
+              "Paid and organic campaigns across search, social, and email channels — optimized for reach, engagement, and ROI.",
+          },
+          {
+            id: "analytics",
+            label: "Analytics & Reporting",
+            content:
+              "Performance tracking, conversion analysis, and actionable insights so you know what's working and where to invest next.",
+          },
+          {
+            id: "dedicated-support",
+            label: "Dedicated Support",
+            content:
+              "Responsive support packages with SLAs, dedicated channels, and a team that knows your product inside and out.",
+          },
+        ],
+      },
+    ],
   },
 };
 
-export const portfolioPage = {
-  hero: {
-    heading: "Projects That Deliver Results",
-    subheading:
-      "Explore our portfolio of web applications, mobile experiences, and immersive 3D projects crafted to solve real business challenges and create meaningful digital impact.",
-    description:
-      "Every project we build is driven by strategy, creativity, and technology. From startups to growing businesses, we help brands transform ideas into exceptional digital products.",
-  },
-  caseStudies: [
-    {
-      title: "Enterprise Management Platform",
-      category: "Web Application",
-      challenge:
-        "The client needed a centralized platform to manage operations, automate workflows, and monitor business performance in real time.",
-      solution:
-        "We developed a scalable web application with custom dashboards, role-based access, reporting tools, and real-time data synchronization.",
-      results: [
-        "Increased operational efficiency",
-        "Reduced manual processes",
-        "Improved reporting and decision-making",
-        "Scalable architecture for future growth",
-      ],
-      highlightColor: "#0ea5e9",
-    },
-    {
-      title: "Multi-Vendor E-Commerce Platform",
-      category: "Web Development",
-      challenge:
-        "The client wanted a modern online marketplace capable of handling multiple vendors and thousands of products.",
-      solution:
-        "We built a high-performance e-commerce platform with vendor management, secure payments, inventory tracking, and responsive design.",
-      results: [
-        "Faster order processing",
-        "Improved user experience",
-        "Increased customer engagement",
-        "Scalable infrastructure",
-      ],
-      highlightColor: "#10b981",
-    },
-    {
-      title: "On-Demand Service Mobile App",
-      category: "Mobile Application",
-      challenge:
-        "The client required a mobile platform connecting customers with service providers in real time.",
-      solution:
-        "We designed and developed a cross-platform mobile application featuring user authentication, live notifications, booking management, and location tracking.",
-      results: [
-        "Seamless booking experience",
-        "Improved customer retention",
-        "Real-time service management",
-        "Consistent performance across devices",
-      ],
-      highlightColor: "#34d399",
-    },
-    {
-      title: "CGI Product Advertising Campaign",
-      category: "3D Development",
-      challenge:
-        "The client needed a visually engaging marketing campaign to showcase products in a unique and memorable way.",
-      solution:
-        "We produced high-quality CGI advertisements, cinematic animations, and photorealistic product visualizations.",
-      results: [
-        "Increased audience engagement",
-        "Stronger brand presentation",
-        "Premium product storytelling",
-        "Enhanced marketing performance",
-      ],
-      highlightColor: "#a78bfa",
-    },
-  ],
-  showcase: {
-    heading: "See Our Work in Action",
-    description:
-      "Every project is designed with attention to performance, usability, and visual excellence. Explore screenshots, interactive demos, and project highlights to experience our work firsthand.",
-    items: [
-      "Interactive Web Application Demos",
-      "Mobile App Screenshots",
-      "Dashboard Interfaces",
-      "E-Commerce Experiences",
-      "3D Product Visualizations",
-      "CGI Animation Reels",
-      "Environment Design Showcases",
-    ],
-  },
-  categories: [
-    {
-      title: "Web Development",
-      description:
-        "Modern websites and scalable web applications built using the latest JavaScript technologies.",
-      projects: [
-        "Corporate Websites",
-        "SaaS Platforms",
-        "E-Commerce Solutions",
-        "Admin Dashboards",
-        "Custom Web Applications",
-      ],
-      highlightColor: "#0ea5e9",
-    },
-    {
-      title: "App Development",
-      description:
-        "Cross-platform mobile applications designed for seamless experiences across Android and iOS.",
-      projects: [
-        "On-Demand Apps",
-        "Business Applications",
-        "Booking Platforms",
-        "Social Applications",
-        "Real-Time Communication Apps",
-      ],
-      highlightColor: "#10b981",
-    },
-    {
-      title: "3D Development",
-      description:
-        "Immersive visual experiences that combine creativity and technology.",
-      projects: [
-        "3D Product Modeling",
-        "Character Rigging",
-        "Animated Commercials",
-        "CGI Advertising Campaigns",
-        "Environment Design",
-        "Product Visualization Experiences",
-      ],
-      highlightColor: "#a78bfa",
-    },
-  ],
+export type ServiceItem = {
+  id: string;
+  label: string;
+  content: string;
+};
+
+export type ServiceCategory = {
+  id: string;
+  label: string;
+  number: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  items: ServiceItem[];
+};
+
+export const serviceCategories =
+  servicesPage.services.categories as ServiceCategory[];
+
+export function getServiceBySlug(slug: string) {
+  return serviceCategories.find((service) => service.id === slug);
+}
+
+export function getAllServiceSlugs() {
+  return serviceCategories.map((service) => service.id);
+}
+
+export const footerContent = {
   cta: {
-    heading: "Have an Idea for Your Next Project?",
-    description:
-      "We're passionate about turning ambitious ideas into exceptional digital products. Let's create something impactful together.",
-    primaryCta: { label: "View More Projects", href: "/portfolio" },
-    secondaryCta: { label: "Start Your Project", href: "/contact" },
+    eyebrow: "Your dream project is just a click away.",
+    heading: "Let's code the future together!",
+    button: { label: "Get in Touch", href: "/contact" },
+  },
+  description:
+    "Delivering custom digital solutions to ensure your business stays competitive and future-ready.",
+  newsletter: {
+    label: "Subscribe to our newsletter",
+    placeholder: "Enter Your Email Address",
+    button: "Subscribe",
+  },
+  locations: [
+    {
+      label: "USA",
+      address: "DE, USA, 8 The Green, STE R, Dover, DE 19901",
+    },
+    {
+      label: "PAK",
+      address: "7/B-3 Aziz Avenue, Canal Rd, Gulberg-V Lahore, 54000",
+    },
+  ],
+  contact: {
+    phones: ["USA +1 (302) 244-7860", "PAK +92 (316) 4067232"],
+    email: "hello@digitalstudio.com",
+  },
+  social: [
+    {
+      label: "Instagram",
+      href: "https://instagram.com/",
+      icon: "instagram" as const,
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/arslan-jameel/",
+      icon: "linkedin" as const,
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/Arslan-chaudhry99/",
+      icon: "github" as const,
+    },
+  ],
+  legal: {
+    terms: "/contact",
+    privacy: "/contact",
   },
 };
 
@@ -480,96 +529,7 @@ export const aboutPage = {
     description:
       "Ready to partner with a team that cares about your success as much as you do?",
     primaryCta: { label: "Get in Touch", href: "/contact" },
-    secondaryCta: { label: "View Our Work", href: "/portfolio" },
-  },
-};
-
-export const technologiesPage = {
-  hero: {
-    heading: "Technology Stack & Capabilities",
-    subheading:
-      "We build with industry-leading JavaScript technologies, modern frameworks, and proven development practices to deliver reliable, scalable digital products.",
-  },
-  stack: {
-    title: "Our JavaScript Stack",
-    description:
-      "From frontend interfaces to backend APIs and mobile apps, our technology choices are driven by performance, maintainability, and long-term scalability.",
-    categories: [
-      {
-        title: "Frontend",
-        items: [
-          "React.js",
-          "Next.js",
-          "TypeScript",
-          "Tailwind CSS",
-          "HTML5 & CSS3",
-        ],
-        highlightColor: "#0ea5e9",
-      },
-      {
-        title: "Backend",
-        items: [
-          "Node.js",
-          "Express.js",
-          "REST APIs",
-          "GraphQL",
-          "Socket.io",
-        ],
-        highlightColor: "#10b981",
-      },
-      {
-        title: "Mobile",
-        items: [
-          "React Native",
-          "Cross-Platform Development",
-          "Firebase",
-          "Push Notifications",
-        ],
-        highlightColor: "#34d399",
-      },
-      {
-        title: "Database & Cloud",
-        items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Prisma"],
-        highlightColor: "#f472b6",
-      },
-      {
-        title: "3D & Creative",
-        items: [
-          "3D Modeling",
-          "Animation",
-          "CGI Production",
-          "Product Visualization",
-        ],
-        highlightColor: "#a78bfa",
-      },
-      {
-        title: "Tools & Workflow",
-        items: ["Git", "GitHub", "Vite", "Figma", "CI/CD"],
-        highlightColor: "#facc15",
-      },
-    ],
-  },
-  capabilities: {
-    title: "Development Process & Capabilities",
-    description:
-      "Our development approach combines agile methodology with rigorous quality standards to ensure every project is delivered on time and exceeds expectations.",
-    items: [
-      "Agile sprint-based development with regular client updates",
-      "Responsive, mobile-first design and development",
-      "API-first architecture for seamless integrations",
-      "Performance optimization and security best practices",
-      "Automated testing and quality assurance",
-      "Scalable cloud deployment and DevOps support",
-      "Real-time features with WebSocket and push notifications",
-      "Cross-platform mobile development with shared codebases",
-    ],
-  },
-  cta: {
-    heading: "Built with the Right Tools for Your Project",
-    description:
-      "Not sure which technologies fit your needs? We'll help you choose the optimal stack for your goals.",
-    primaryCta: { label: "Discuss Your Project", href: "/contact" },
-    secondaryCta: { label: "View Services", href: "/services" },
+    secondaryCta: { label: "View Our Work", href: "/#projects" },
   },
 };
 
@@ -599,6 +559,75 @@ export const contactPage = {
       question: "Can you work with our existing team?",
       answer:
         "Absolutely. We offer dedicated team engagements and can integrate seamlessly with your in-house developers and designers.",
+    },
+  ],
+};
+
+export const homeFaq = [
+  {
+    question: "What services does your studio offer?",
+    answer:
+      "We provide web development, mobile app development, 3D modeling & CGI, video editing & graphics, and SEO & digital marketing — from strategy and design through launch and ongoing support.",
+  },
+  {
+    question: "How long does a typical project take?",
+    answer:
+      "A marketing website may take 4–6 weeks, while a custom web or mobile app typically runs 8–16 weeks. 3D campaigns and larger platforms can take 3–6 months depending on scope. We share a clear timeline after discovery.",
+  },
+  {
+    question: "Do you work with startups and existing businesses?",
+    answer:
+      "Yes. We partner with startups launching their first product and with established teams that need extra capacity for web, mobile, 3D, or marketing work.",
+  },
+  {
+    question: "Can you integrate with our existing team or tools?",
+    answer:
+      "Absolutely. We can join your in-house developers and designers, work within your stack, and connect with the APIs, CRMs, and platforms you already use.",
+  },
+  {
+    question: "Do you offer ongoing support after launch?",
+    answer:
+      "Yes. We provide maintenance, updates, performance monitoring, and dedicated support packages so your product stays secure, fast, and up to date.",
+  },
+  {
+    question: "How do I get started on a project?",
+    answer:
+      "Reach out through our contact form or book a free consultation. We'll discuss your goals, timeline, and budget, then put together a tailored proposal.",
+  },
+];
+
+export const homeReviews = {
+  heading: "Our clients keep talking",
+  subheading: "Listen to what they say about our services",
+  items: [
+    {
+      name: "Abdul-Majeed Ahmed",
+      company: "",
+      quote: "Great work with the React Native conversions. Cheers!",
+    },
+    {
+      name: "Bassam El Koussa",
+      company: "CoinLab",
+      quote:
+        "Great experience with Digital Studio, high knowledge in React Components, outstanding results!",
+    },
+    {
+      name: "Brijesh Pati",
+      company: "",
+      quote:
+        "One of the best devs I have come across. Ever reliable, great quality of code. Thorough & professional",
+    },
+    {
+      name: "Sarah Mitchell",
+      company: "LaunchPad",
+      quote:
+        "They delivered our web platform on time with clean code and excellent communication throughout.",
+    },
+    {
+      name: "Omar Hassan",
+      company: "TechVerse",
+      quote:
+        "Professional team with strong expertise in Next.js and mobile development. Highly recommended.",
     },
   ],
 };

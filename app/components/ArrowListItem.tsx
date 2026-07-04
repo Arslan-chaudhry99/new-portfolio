@@ -1,6 +1,6 @@
 export default function ArrowListItem({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-center gap-3 group text-gray-300">
+    <li className="flex items-center gap-3 group text-secondary">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -11,7 +11,7 @@ export default function ArrowListItem({ children }: { children: React.ReactNode 
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="w-4 h-4 text-green-400 group-hover:translate-x-1 transition-transform flex-shrink-0"
+        className="w-4 h-4 text-primary-light group-hover:translate-x-1 transition-transform flex-shrink-0"
       >
         <path d="M5 12h14" />
         <path d="M13 18l6-6" />

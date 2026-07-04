@@ -35,7 +35,7 @@ export default function BlogPostPage({ params }: Props) {
             <div className="container mx-auto max-w-3xl">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-sm font-medium text-sky-400 hover:underline underline-offset-4 mb-10"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary-light hover:underline underline-offset-4 mb-10"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,22 +58,22 @@ export default function BlogPostPage({ params }: Props) {
               <header className="mb-10">
                 <time
                   dateTime={post.dateIso}
-                  className="text-sm font-medium text-gray-500"
+                  className="text-sm font-medium text-muted"
                 >
                   {post.date}
                 </time>
-                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight leading-tight text-gray-100">
+                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight leading-tight text-foreground">
                   {post.title}
                 </h1>
-                <p className="mt-6 text-lg text-gray-400 font-medium leading-relaxed">
+                <p className="mt-6 text-lg text-muted font-medium leading-relaxed">
                   {post.excerpt}
                 </p>
-                <p className="mt-3 text-sm text-gray-500 font-medium">
+                <p className="mt-3 text-sm text-muted font-medium">
                   {post.readTime}
                 </p>
               </header>
 
-              <div className="relative rounded-2xl overflow-hidden ring-1 ring-inset ring-gray-700/30 mb-12 aspect-[21/9] max-h-72">
+              <div className="relative rounded-2xl overflow-hidden bg-surface ring-1 ring-inset ring-brand-border mb-12 aspect-[21/9] max-h-72">
                 <BlogCoverImage
                   src={post.cover}
                   alt={post.coverAlt}

@@ -19,10 +19,9 @@ export default function ReadMoreAbout() {
         Virtual University. Most of the things I build or learn is still driven
         by curiosity even today.
       </p>
-      <div className="lg:hidden text-center absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-75% to-[#1E1E21] rounded-b-2xl">
+      <div className="lg:hidden text-center absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-75% to-surface-2 rounded-b-2xl">
         <button
-          style={{ background: "rgba(39, 39, 42, .9) !important" }}
-          className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900 shadow-xl shadow-black/20 ring-1 [&:not(:focus)]:ring-inset ring-gray-700/30 hover:bg-gray-700/70 focus:ring-gray-600 focus:ring-offset-2 text-sm font-medium px-4 py-2 mt-14 !text-white"
+          className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-background bg-surface ring-1 ring-inset ring-brand-border hover:bg-surface-2 focus:ring-primary/50 focus:ring-offset-2 text-sm font-medium px-4 py-2 mt-14 text-foreground"
           onClick={() => setReadMore(!readMore)}
         >
           {readMore ? "Read less" : "Read more"}

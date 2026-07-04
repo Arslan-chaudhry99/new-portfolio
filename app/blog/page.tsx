@@ -18,10 +18,10 @@ export default function BlogIndexPage() {
         <Menu />
         <main className="relative min-h-screen">
           <section className="md:h-screen-1/2 pt-40 pb-20 md:pt-40 md:pb-20 px-8 2xl:px-32 flex flex-col items-center justify-center text-center">
-            <h1 className="text-5xl font-semibold tracking-tight leading-tight text-gray-100">
+            <h1 className="text-5xl font-semibold tracking-tight leading-tight text-foreground">
               Insights
             </h1>
-            <p className="mt-7 text-lg leading-relaxed font-medium text-gray-400 max-w-2xl">
+            <p className="mt-7 text-lg leading-relaxed font-medium text-muted max-w-2xl">
               Web development articles, JavaScript tutorials, industry insights, and case studies.
             </p>
          
@@ -33,39 +33,39 @@ export default function BlogIndexPage() {
                 <li key={post.slug}>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="group block h-full rounded-2xl relative overflow-hidden shadow-md hover:shadow-2xl transition bg-[#1b1b1e] ring-1 ring-inset ring-gray-700/30"
+                    className="group block h-full rounded-2xl relative overflow-hidden shadow-md hover:shadow-2xl transition bg-surface-2 bg-surface ring-1 ring-inset ring-brand-border"
                     style={
                       {
-                        "--highlight-color": "#0ea5e9",
+                        "--highlight-color": "#1976FF",
                       } as React.CSSProperties
                     }
                   >
                     <div className="absolute inset-0 bg-dots fade-y opacity-50" />
-                    <div className="absolute z-10 bottom-0 right-0 h-[80%] aspect-square bg-gradient-to-c from-sky-500 to-[70%] to-transparent rounded-full opacity-20 sm:group-hover:opacity-30 group-hover:scale-110 transition duration-300 pointer-events-none" />
+                    <div className="absolute z-10 bottom-0 right-0 h-[80%] aspect-square bg-gradient-to-c from-primary to-[70%] to-transparent rounded-full opacity-20 sm:group-hover:opacity-30 group-hover:scale-110 transition duration-300 pointer-events-none" />
 
                     <div className="relative z-20 flex flex-col h-full">
                       <div className="p-8 sm:p-10 flex flex-col flex-1">
                         <time
                           dateTime={post.dateIso}
-                          className="text-sm font-medium text-gray-500"
+                          className="text-sm font-medium text-muted"
                         >
                           {post.date}
                         </time>
-                        <h2 className="mt-4 text-2xl font-semibold tracking-tight text-gray-100 group-hover:text-sky-300 transition-colors">
+                        <h2 className="mt-4 text-2xl font-semibold tracking-tight text-foreground group-hover:text-primary-light transition-colors">
                           {post.title}
                         </h2>
-                        <p className="mt-4 text-gray-400 font-medium text-sm leading-relaxed tracking-wide flex-1">
+                        <p className="mt-4 text-muted font-medium text-sm leading-relaxed tracking-wide flex-1">
                           {post.excerpt}
                         </p>
-                        <div className="mt-6 flex items-center gap-2 text-sm font-medium text-gray-500">
+                        <div className="mt-6 flex items-center gap-2 text-sm font-medium text-muted">
                           <span>{post.readTime}</span>
                           <span aria-hidden="true">·</span>
-                          <span className="text-sky-400 group-hover:underline underline-offset-4">
+                          <span className="text-primary-light group-hover:underline underline-offset-4">
                             Read post
                           </span>
                         </div>
                       </div>
-                      <div className="relative h-48 w-full overflow-hidden border-t border-gray-700/30">
+                      <div className="relative h-48 w-full overflow-hidden border-t border-brand-border">
                         <BlogCoverImage
                           src={post.cover}
                           alt={post.coverAlt}
