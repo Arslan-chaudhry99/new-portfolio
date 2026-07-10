@@ -3,6 +3,7 @@ export const AGENCY_NAME = "Digital Studio";
 export const navLinks = [
   { href: "/", label: "Home", color: "#1976FF" },
   { href: "/services", label: "Services", color: "#1976FF" },
+  { href: "/projects", label: "Portfolio", color: "#38B6FF" },
   { href: "/blog", label: "Blog", color: "#38B6FF" },
   { href: "/contact", label: "Contact", color: "#1976FF" },
 ] as const;
@@ -535,9 +536,24 @@ export const aboutPage = {
     description:
       "Ready to partner with a team that cares about your success as much as you do?",
     primaryCta: { label: "Get in Touch", href: "/contact" },
-    secondaryCta: { label: "View Our Work", href: "/#projects" },
+    secondaryCta: { label: "View Our Work", href: "/projects" },
   },
 };
+
+export const portfolioPage = {
+  hero: {
+    heading: "Our Work",
+    subheading:
+      "Explore projects we've built for clients, open-source contributions, and personal experiments across web and mobile.",
+  },
+  categories: [
+    { id: "web-development", label: "Web Development" },
+    { id: "app-development", label: "App Development" },
+    { id: "3d-development", label: "3D Development" },
+    { id: "video-graphics", label: "Video & Graphics" },
+    { id: "seo-marketing", label: "SEO & Marketing" },
+  ],
+} as const;
 
 export const contactPage = {
   hero: {

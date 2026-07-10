@@ -1,3 +1,10 @@
+export type ProjectCategory =
+  | "web-development"
+  | "app-development"
+  | "3d-development"
+  | "video-graphics"
+  | "seo-marketing";
+
 export type Project = {
   title: string;
   description: string;
@@ -6,12 +13,31 @@ export type Project = {
   preview: string;
   github: string;
   tag?: string;
+  category: ProjectCategory;
 };
 
 export type ProjectYearGroup = {
   year: number;
   projects: Project[];
 };
+
+export type FlatProject = {
+  project: Project;
+  year: number;
+};
+
+export function flattenProjects(data: ProjectYearGroup[] = projectData): FlatProject[] {
+  return data.flatMap(({ year, projects }) =>
+    projects.map((project) => ({ project, year })),
+  );
+}
+
+export function projectMatchesCategory(
+  project: Project,
+  categoryId: string,
+): boolean {
+  return project.category === categoryId;
+}
 
 export const projectData: ProjectYearGroup[] = [
   {
@@ -26,6 +52,7 @@ export const projectData: ProjectYearGroup[] = [
         preview: "https://wanya.io/",
         github: "",
         tag: "contribute",
+        category: "web-development",
       },
       {
         title: "wanya Mobile App",
@@ -37,6 +64,7 @@ export const projectData: ProjectYearGroup[] = [
           "https://play.google.com/store/apps/details?hl=as&id=com.wanya.app",
         github: "",
         tag: "contribute",
+        category: "app-development",
       },
     ],
   },
@@ -53,6 +81,7 @@ export const projectData: ProjectYearGroup[] = [
           "https://play.google.com/store/apps/details?id=world.audivi.audivi",
         github: "",
         tag: "contribute",
+        category: "app-development",
       },
       {
         title: "Z Chat",
@@ -71,6 +100,7 @@ export const projectData: ProjectYearGroup[] = [
         preview: "",
         github: "",
         tag: "contribute",
+        category: "web-development",
       },
       {
         title: "Manjam",
@@ -81,6 +111,7 @@ export const projectData: ProjectYearGroup[] = [
         preview: "",
         github: "",
         tag: "contribute",
+        category: "web-development",
       },
     ],
   },
@@ -97,6 +128,7 @@ export const projectData: ProjectYearGroup[] = [
           "https://wits-tv-sufian-zulfiqar-5jp7wylx5-sufianzulfiqar786.vercel.app/today-prize",
         github: "",
         tag: "contribute",
+        category: "web-development",
       },
       {
         title: "Ajman Sewerage Web",
@@ -116,6 +148,7 @@ export const projectData: ProjectYearGroup[] = [
         date: "",
         preview: "https://www.ajmansewerage.ae/home",
         github: "",
+        category: "web-development",
       },
       {
         title: "Hiring Hash",
@@ -135,6 +168,7 @@ export const projectData: ProjectYearGroup[] = [
         date: "",
         preview: "",
         github: "",
+        category: "web-development",
       },
       {
         title: "Ajman Sewerage Mobile App",
@@ -145,6 +179,7 @@ export const projectData: ProjectYearGroup[] = [
         preview:
           "https://play.google.com/store/apps/details?hl=en_US&id=com.moalajah.ajmansewerageutility",
         github: "",
+        category: "app-development",
       },
       {
         title: "maweidi",
@@ -161,6 +196,7 @@ export const projectData: ProjectYearGroup[] = [
         date: "",
         preview: "https://maweidi-dashboard.netlify.app/",
         github: "",
+        category: "web-development",
       },
       {
         title: "NFT Web",
@@ -170,6 +206,7 @@ export const projectData: ProjectYearGroup[] = [
         date: " ",
         preview: "https://nft-web-sample.netlify.app/",
         github: "",
+        category: "web-development",
       },
     ],
   },
@@ -192,6 +229,7 @@ export const projectData: ProjectYearGroup[] = [
         preview: "",
         github: "https://github.com/Arslan-chaudhry99/gramer-school",
         tag: "Personal",
+        category: "web-development",
       },
       {
         title: "Audio App",
@@ -204,6 +242,7 @@ export const projectData: ProjectYearGroup[] = [
         github:
           "https://github.com/Arslan-chaudhry99/killer-responsive-audio-app-with-javascript",
         tag: "Personal",
+        category: "web-development",
       },
       {
         title: "Covid-19 App",
@@ -214,6 +253,7 @@ export const projectData: ProjectYearGroup[] = [
         preview: "",
         github: "https://github.com/Arslan-chaudhry99/covid-19-react-app",
         tag: "Personal",
+        category: "web-development",
       },
       {
         title: "Weather app",
@@ -224,6 +264,7 @@ export const projectData: ProjectYearGroup[] = [
         preview: "",
         github: "https://github.com/Arslan-chaudhry99/react-weather-app",
         tag: "Personal",
+        category: "web-development",
       },
       {
         title: "Coder feast",
@@ -242,6 +283,7 @@ export const projectData: ProjectYearGroup[] = [
         date: "",
         preview: "https://coderfeast.com/",
         github: "",
+        category: "web-development",
       },
       {
         title: "Multi Serv",
@@ -251,6 +293,7 @@ export const projectData: ProjectYearGroup[] = [
         date: "",
         preview: "https://multiserv.org/our-team/",
         github: "",
+        category: "web-development",
       },
     ],
   },
