@@ -7,9 +7,6 @@ import arslan4 from "../app/assess/imgs/FB_IMG_1718445502672.jpg";
 import arslan22 from "../app/assess/imgs/miocreate_faceswap.jpeg";
 import arslan5 from "../app/assess/imgs/Screenshot from 2024-07-16 12-39-20.png";
 import multiimage from "../app/assess/imgs/Multi.png";
-import wanyaAndroid from "./assess/imgs/wanya-android.png";
-import videoThumb from "./assess/imgs/thumbnail.webp";
-import seoImage from "./assess/imgs/multiServ.jpeg";
 
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
@@ -34,14 +31,6 @@ export const metadata: Metadata = {
 
 const marqueeImages = [arslan4, multiimage, arslan3, arslan5, arslan22];
 
-const serviceImages = {
-  web: arslan3,
-  app: wanyaAndroid,
-  "3d": arslan22,
-  video: videoThumb,
-  seo: seoImage,
-} as const;
-
 const homeSectionClass = "container mx-auto px-8 2xl:px-32";
 
 export default function Page() {
@@ -52,8 +41,24 @@ export default function Page() {
 
         <main className="relative min-h-screen">
           {/* Hero */}
-          <section className={`relative ${homeSectionClass} h-[100dvh] min-h-[640px] max-h-[900px] flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 sm:gap-6 lg:gap-10 pt-24 pb-6 sm:pb-8 box-border overflow-hidden`}>
-            <div className="w-full lg:w-[48%] xl:max-w-xl shrink-0 order-1 lg:order-1 flex flex-col justify-center">
+          <section className="relative h-[100dvh] min-h-[640px] max-h-[900px] overflow-hidden">
+            <div className="pointer-events-none absolute inset-0 w-full">
+              <video
+                src={homeHero.backgroundVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                aria-hidden="true"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+              <div className="absolute inset-0 bg-dots opacity-25" />
+            </div>
+
+            <div className={`relative z-10 ${homeSectionClass} h-full flex flex-col justify-center pt-24 pb-6 sm:pb-8`}>
+              <div className="w-full max-w-xl">
               <h1 className="font-semibold tracking-tight text-foreground text-4xl leading-[1.2] sm:text-[2.5rem] md:text-5xl lg:leading-tight">
                 {homeHero.heading.split(" ").slice(0, 2).join(" ")}{" "}
                 <span className="gradient-text bg-clip-text font-semibold">
@@ -92,23 +97,6 @@ export default function Page() {
                 brands={clientLogos.brands}
               />
               </div>
-            </div>
-            <div className="w-full lg:w-[52%] h-[42vh] sm:h-[45vh] lg:h-full lg:max-h-[calc(100dvh-8rem)] min-h-[220px] shrink-0 flex items-end lg:items-center justify-center lg:justify-end order-2 lg:order-2 overflow-hidden mt-auto lg:mt-0">
-              <div className="relative h-full max-h-full aspect-square w-auto max-w-[min(100%,90vw)] sm:max-w-full overflow-hidden">
-                <div className="absolute inset-0 bg-dots [mask-image:radial-gradient(black_55%,transparent_75%)] rounded-full pointer-events-none" />
-                <div className="absolute inset-0 [mask-image:radial-gradient(black_42%,transparent_57%)] rounded-full pointer-events-none">
-                  <div className="absolute inset-[12%] highlight mask-dots rounded-full" />
-                </div>
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/assess/glob_image.png"
-                    alt="Global digital solutions"
-                    fill
-                    className="object-contain drop-shadow-2xl"
-                    priority
-                    sizes="(max-width: 640px) 70vw, (max-width: 1024px) 45vw, 520px"
-                  />
-                </div>
               </div>
             </div>
           </section>
@@ -191,7 +179,7 @@ export default function Page() {
                   title={service.title}
                   description={service.description}
                   icon={service.icon}
-                  image={serviceImages[service.icon]}
+                  image={service.image}
                   href={service.href}
                 />
               ))}

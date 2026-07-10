@@ -102,7 +102,7 @@ type ServiceCardProps = {
   title: string;
   description: string;
   icon: ServiceIcon;
-  image: StaticImageData;
+  image: StaticImageData | string;
   href: string;
 };
 
@@ -118,7 +118,6 @@ export default function ServiceCard({
       href={href}
       className="group relative block overflow-hidden rounded-2xl ring-1 ring-inset ring-brand-border bg-surface transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-light"
     >
-      {/* Background image — visible on hover */}
       <div className="absolute inset-0 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100">
         <Image
           src={image}
@@ -130,7 +129,6 @@ export default function ServiceCard({
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/15" />
       </div>
 
-      {/* Default content */}
       <div className="relative z-10 flex flex-col gap-4 p-5 sm:p-6 transition-opacity duration-300 group-hover:opacity-0">
         <div className="text-foreground/90">{icons[icon]}</div>
         <div>
@@ -143,7 +141,6 @@ export default function ServiceCard({
         </div>
       </div>
 
-      {/* Hover content — icon badge + white text */}
       <div className="pointer-events-none absolute inset-0 z-20 flex flex-col gap-4 p-5 sm:p-6 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-black shadow-lg">
           {icons[icon]}

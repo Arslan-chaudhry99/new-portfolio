@@ -12,6 +12,7 @@ export const homeHero = {
   subheading:
     "A full-service studio for web, mobile, and 3D — we turn ideas into scalable products that help businesses grow and stand out.",
   cta: { label: "Let's get in touch", href: "/contact" },
+  backgroundVideo: "/animated_logo.mp4",
 };
 
 export const clientLogos = {
@@ -51,6 +52,7 @@ export const servicesOverview = [
     description:
       "Transform your ideas into reality with our cutting-edge web development services.",
     icon: "web" as const,
+    image: "/images/web_development.jpeg",
     href: "/services#service-web-development",
   },
   {
@@ -58,6 +60,7 @@ export const servicesOverview = [
     description:
       "Build powerful mobile experiences with cross-platform apps designed for performance and scale.",
     icon: "app" as const,
+    image: "/images/mobile-app-development.webp",
     href: "/services#service-app-development",
   },
   {
@@ -65,6 +68,7 @@ export const servicesOverview = [
     description:
       "Bring products and brands to life with immersive 3D modeling, animation, and CGI.",
     icon: "3d" as const,
+    image: "/images/3d_dev.jpg",
     href: "/services#service-3d-development",
   },
   {
@@ -72,6 +76,7 @@ export const servicesOverview = [
     description:
       "Polished video content and creative graphics for campaigns, product launches, and social media that capture attention.",
     icon: "video" as const,
+    image: "/images/video_editing.jpg",
     href: "/services#service-video-graphics",
   },
   {
@@ -79,6 +84,7 @@ export const servicesOverview = [
     description:
       "Grow your reach with data-driven SEO, content strategy, and digital marketing campaigns.",
     icon: "seo" as const,
+    image: "/images/seo.jpeg",
     href: "/services#service-seo-marketing",
   },
 ];
