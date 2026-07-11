@@ -14,6 +14,8 @@ export type Project = {
   github: string;
   tag?: string;
   category: ProjectCategory;
+  video?: string;
+  images?: string[];
 };
 
 export type ProjectYearGroup = {
@@ -40,6 +42,66 @@ export function projectMatchesCategory(
 }
 
 export const projectData: ProjectYearGroup[] = [
+  {
+    year: 2026,
+    projects: [
+      {
+        title: "Character Rigging & Animation",
+        description:
+          "A fully rigged 3D character built for smooth, production-ready animation. I set up a complete skeleton with weighted joints, inverse kinematics, and custom controllers so the model can be posed and animated naturally. The rig is optimized for game engines and real-time playback, giving animators clean deformations and an intuitive control layout for facial and body movement.",
+        tags: ["Blender", "3D Rigging", "Character Animation", "Rigify"],
+        date: "",
+        preview: "",
+        github: "",
+        category: "3d-development",
+        video:
+          "https://res.cloudinary.com/dyxdjx1vj/video/upload/v1783759220/WhatsApp_Video_2026-07-11_at_12.52.42_AM_lwatuj.mp4",
+      },
+      {
+        title: "3D Character Animation",
+        description:
+          "A hand-crafted 3D character animation focused on natural motion, weight, and timing. Working from a rigged model, I animated the full performance keyframe by keyframe — refining poses, arcs, and follow-through to bring the character to life. The result is a smooth, expressive sequence suitable for films, games, and product storytelling.",
+        tags: ["Blender", "3D Animation", "Keyframe Animation", "Rendering"],
+        date: "",
+        preview: "",
+        github: "",
+        category: "3d-development",
+        video:
+          "https://res.cloudinary.com/dyxdjx1vj/video/upload/v1783758995/WhatsApp_Video_2026-07-11_at_1.31.27_AM_s640da.mp4",
+      },
+      {
+        title: "Cyberpunk Character Renders",
+        description:
+          "A stylized cyberpunk character created and rendered in 3D, featuring a half-exposed cybernetic face with detailed wiring, neon accents, and a glossy techwear outfit. I handled modeling, texturing, materials, lighting, and final rendering to achieve a moody, high-contrast look across multiple hero shots and angles.",
+        tags: ["Blender", "3D Modeling", "Texturing", "Lighting", "Rendering"],
+        date: "",
+        preview: "",
+        github: "",
+        category: "3d-development",
+        images: [
+          "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758136/WhatsApp_Image_2026-07-11_at_12.54.53_AM_urbyff.jpg",
+          "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758136/WhatsApp_Image_2026-07-11_at_12.54.52_AM_1_och1gd.jpg",
+          "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758136/WhatsApp_Image_2026-07-11_at_12.54.52_AM_kj8hff.jpg",
+        ],
+      },
+      {
+        title: "Character Production Pipeline",
+        description:
+          "A behind-the-scenes look at my full character creation workflow — from concept to final render. It walks through the process boards (sketch, grey structure, texturing, final render), the detailed concept sheet with material and color callouts, complete UV mapping layouts for body, clothes, hair, and accessories, and the high-poly sculpt. Together these show how a character goes from a rough idea to a game-ready 3D asset.",
+        tags: ["Concept Art", "Sculpting", "UV Mapping", "Blender", "ZBrush"],
+        date: "",
+        preview: "",
+        github: "",
+        category: "3d-development",
+        images: [
+          "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758124/ChatGPT_Image_Jul_5_2026_08_22_13_AM_rgrjse.png",
+          "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758120/ChatGPT_Image_Jul_11_2026_01_09_46_AM_ulbmtq.png",
+          "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758119/ChatGPT_Image_Jul_11_2026_01_09_12_AM_du5num.png",
+          "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758118/ChatGPT_Image_Jul_11_2026_12_58_20_AM_pzuo1z.png",
+        ],
+      },
+    ],
+  },
   {
     year: 2024,
     projects: [

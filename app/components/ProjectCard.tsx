@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Project } from "../projects/data";
 
 type ProjectCardProps = {
@@ -14,6 +14,17 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
   const [translate, setTranslate] = useState({ x: 0, y: 0 });
   const cardId = `${index}.${year}`;
   const [activeCardId, setActiveCardId] = useState<string | number>(-1);
+  const [slide, setSlide] = useState(0);
+
+  const images = project.images ?? [];
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const timer = window.setInterval(() => {
+      setSlide((prev) => (prev + 1) % images.length);
+    }, 3500);
+    return () => window.clearInterval(timer);
+  }, [images.length]);
 
   const isActive = hovered && activeCardId === cardId;
 
@@ -86,6 +97,58 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
             <p className="text-muted font-medium text-sm mt-3 mb-6 leading-relaxed tracking-wide">
               {project.description}
             </p>
+            {project.video && (
+              <div className="relative mb-6 overflow-hidden rounded-xl ring-1 ring-inset ring-brand-border bg-black">
+                <video
+                  className="w-full h-auto max-h-96 object-contain"
+                  src={project.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                />
+              </div>
+            )}
+            {images.length > 0 && (
+              <div className="mb-6">
+                <div className="relative overflow-hidden rounded-xl ring-1 ring-inset ring-brand-border bg-black">
+                  <div
+                    className="flex transition-transform duration-500 ease-out"
+                    style={{ transform: `translateX(-${slide * 100}%)` }}
+                  >
+                    {images.map((src, i) => (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        key={src}
+                        src={src}
+                        alt={`${project.title} render ${i + 1}`}
+                        loading="lazy"
+                        className="w-full shrink-0 h-80 object-contain"
+                      />
+                    ))}
+                  </div>
+                </div>
+                {images.length > 1 && (
+                  <div className="mt-3 flex justify-center gap-2 pointer-events-auto">
+                    {images.map((src, i) => (
+                      <button
+                        key={src}
+                        type="button"
+                        onClick={() => setSlide(i)}
+                        aria-label={`Go to render ${i + 1}`}
+                        aria-current={i === slide}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          i === slide
+                            ? "w-6 bg-primary-light"
+                            : "w-2 bg-foreground/25 hover:bg-foreground/50"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
             <ul
               className="flex flex-wrap gap-1.5 text-sm mt-auto"
               aria-label="Technologies used in this project"
