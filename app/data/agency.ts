@@ -551,7 +551,7 @@ export const portfolioPage = {
     { id: "app-development", label: "App Development" },
     { id: "3d-development", label: "3D Development" },
     { id: "video-graphics", label: "Video & Graphics" },
-    { id: "seo-marketing", label: "SEO & Marketing" },
+    { id: "brand-identity", label: "Brand Identity" },
   ],
 } as const;
 

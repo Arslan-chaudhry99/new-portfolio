@@ -15,16 +15,70 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
   const cardId = `${index}.${year}`;
   const [activeCardId, setActiveCardId] = useState<string | number>(-1);
   const [slide, setSlide] = useState(0);
+  const [videoSlide, setVideoSlide] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalMedia, setModalMedia] = useState<"images" | "video">("images");
 
   const images = project.images ?? [];
+  const videos =
+    project.videos ?? (project.video ? [project.video] : []);
 
   useEffect(() => {
-    if (images.length <= 1) return;
+    if (images.length <= 1 || modalOpen) return;
     const timer = window.setInterval(() => {
       setSlide((prev) => (prev + 1) % images.length);
     }, 3500);
     return () => window.clearInterval(timer);
-  }, [images.length]);
+  }, [images.length, modalOpen]);
+
+  useEffect(() => {
+    if (!modalOpen) return;
+
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setModalOpen(false);
+      } else if (modalMedia === "images" && images.length > 1) {
+        if (event.key === "ArrowRight") {
+          setSlide((prev) => (prev + 1) % images.length);
+        } else if (event.key === "ArrowLeft") {
+          setSlide((prev) => (prev - 1 + images.length) % images.length);
+        }
+      } else if (modalMedia === "video" && videos.length > 1) {
+        if (event.key === "ArrowRight") {
+          setVideoSlide((prev) => (prev + 1) % videos.length);
+        } else if (event.key === "ArrowLeft") {
+          setVideoSlide((prev) => (prev - 1 + videos.length) % videos.length);
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKey);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "";
+    };
+  }, [modalOpen, modalMedia, images.length, videos.length]);
+
+  const openImageModal = (i: number) => {
+    setSlide(i);
+    setModalMedia("images");
+    setModalOpen(true);
+  };
+
+  const openVideoModal = (i: number) => {
+    setVideoSlide(i);
+    setModalMedia("video");
+    setModalOpen(true);
+  };
+
+  const nextSlide = () => setSlide((prev) => (prev + 1) % images.length);
+  const prevSlide = () =>
+    setSlide((prev) => (prev - 1 + images.length) % images.length);
+  const nextVideo = () => setVideoSlide((prev) => (prev + 1) % videos.length);
+  const prevVideo = () =>
+    setVideoSlide((prev) => (prev - 1 + videos.length) % videos.length);
 
   const isActive = hovered && activeCardId === cardId;
 
@@ -50,6 +104,7 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
   };
 
   return (
+    <>
     <div
       className="relative h-full"
       onMouseEnter={() => {
@@ -97,22 +152,60 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
             <p className="text-muted font-medium text-sm mt-3 mb-6 leading-relaxed tracking-wide">
               {project.description}
             </p>
-            {project.video && (
-              <div className="relative mb-6 overflow-hidden rounded-xl ring-1 ring-inset ring-brand-border bg-black">
-                <video
-                  className="w-full h-auto max-h-96 object-contain"
-                  src={project.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                />
+            {videos.length > 0 && (
+              <div className="mb-6">
+                <div className="group/media relative overflow-hidden rounded-xl ring-1 ring-inset ring-brand-border bg-black">
+                  <div
+                    className="flex transition-transform duration-500 ease-out"
+                    style={{ transform: `translateX(-${videoSlide * 100}%)` }}
+                  >
+                    {videos.map((src, i) => (
+                      <button
+                        key={src}
+                        type="button"
+                        onClick={() => openVideoModal(i)}
+                        aria-label={`Expand ${project.title} video ${i + 1}`}
+                        className="w-full shrink-0 block cursor-zoom-in pointer-events-auto"
+                      >
+                        <video
+                          className="w-full h-auto max-h-96 object-contain"
+                          src={src}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          preload="metadata"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                  <span className="absolute top-3 right-3 rounded-full bg-black/60 p-2 text-white opacity-0 transition-opacity group-hover/media:opacity-100 pointer-events-none">
+                    <ExpandIcon />
+                  </span>
+                </div>
+                {videos.length > 1 && (
+                  <div className="mt-3 flex justify-center gap-2 pointer-events-auto">
+                    {videos.map((src, i) => (
+                      <button
+                        key={src}
+                        type="button"
+                        onClick={() => setVideoSlide(i)}
+                        aria-label={`Go to video ${i + 1}`}
+                        aria-current={i === videoSlide}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          i === videoSlide
+                            ? "w-6 bg-primary-light"
+                            : "w-2 bg-foreground/25 hover:bg-foreground/50"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             )}
             {images.length > 0 && (
               <div className="mb-6">
-                <div className="relative overflow-hidden rounded-xl ring-1 ring-inset ring-brand-border bg-black">
+                <div className="group/media relative overflow-hidden rounded-xl ring-1 ring-inset ring-brand-border bg-black">
                   <div
                     className="flex transition-transform duration-500 ease-out"
                     style={{ transform: `translateX(-${slide * 100}%)` }}
@@ -124,10 +217,14 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
                         src={src}
                         alt={`${project.title} render ${i + 1}`}
                         loading="lazy"
-                        className="w-full shrink-0 h-80 object-contain"
+                        onClick={() => openImageModal(i)}
+                        className="w-full shrink-0 h-80 object-contain cursor-zoom-in pointer-events-auto"
                       />
                     ))}
                   </div>
+                  <span className="absolute top-3 right-3 rounded-full bg-black/60 p-2 text-white opacity-0 transition-opacity group-hover/media:opacity-100 pointer-events-none">
+                    <ExpandIcon />
+                  </span>
                 </div>
                 {images.length > 1 && (
                   <div className="mt-3 flex justify-center gap-2 pointer-events-auto">
@@ -222,5 +319,221 @@ export default function ProjectCard({ project, index, year }: ProjectCardProps) 
         </div>
       </div>
     </div>
+
+    {modalOpen && (
+      <div
+        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 sm:p-8 animate-[fadeIn_0.2s_ease-out]"
+        role="dialog"
+        aria-modal="true"
+        aria-label={`${project.title} media viewer`}
+        onClick={() => setModalOpen(false)}
+      >
+        <button
+          type="button"
+          onClick={() => setModalOpen(false)}
+          aria-label="Close"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 z-10 rounded-full bg-white/10 hover:bg-white/20 text-white p-2.5 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-5 h-5"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+
+        <div
+          className="relative max-w-6xl w-full max-h-full flex flex-col items-center"
+          onClick={(event) => event.stopPropagation()}
+        >
+          {modalMedia === "video" && videos.length > 0 ? (
+            <>
+              <div className="relative flex items-center justify-center w-full">
+                {videos.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={prevVideo}
+                    aria-label="Previous video"
+                    className="absolute left-2 sm:-left-4 z-10 rounded-full bg-white/10 hover:bg-white/20 text-white p-2.5 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6"
+                    >
+                      <path d="m15 18-6-6 6-6" />
+                    </svg>
+                  </button>
+                )}
+                <video
+                  key={videos[videoSlide]}
+                  className="max-h-[85vh] w-auto max-w-full rounded-xl"
+                  src={videos[videoSlide]}
+                  controls
+                  autoPlay
+                  loop
+                  playsInline
+                />
+                {videos.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={nextVideo}
+                    aria-label="Next video"
+                    className="absolute right-2 sm:-right-4 z-10 rounded-full bg-white/10 hover:bg-white/20 text-white p-2.5 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+              {videos.length > 1 && (
+                <div className="mt-4 flex justify-center gap-2">
+                  {videos.map((src, i) => (
+                    <button
+                      key={src}
+                      type="button"
+                      onClick={() => setVideoSlide(i)}
+                      aria-label={`Go to video ${i + 1}`}
+                      aria-current={i === videoSlide}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        i === videoSlide
+                          ? "w-6 bg-primary-light"
+                          : "w-2 bg-white/30 hover:bg-white/50"
+                      }`}
+                    />
+                  ))}
+                </div>
+              )}
+            </>
+          ) : (
+            <>
+              <div className="relative flex items-center justify-center w-full">
+                {images.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={prevSlide}
+                    aria-label="Previous image"
+                    className="absolute left-2 sm:-left-4 z-10 rounded-full bg-white/10 hover:bg-white/20 text-white p-2.5 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6"
+                    >
+                      <path d="m15 18-6-6 6-6" />
+                    </svg>
+                  </button>
+                )}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={images[slide]}
+                  alt={`${project.title} render ${slide + 1}`}
+                  className="max-h-[85vh] w-auto max-w-full rounded-xl object-contain"
+                />
+                {images.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={nextSlide}
+                    aria-label="Next image"
+                    className="absolute right-2 sm:-right-4 z-10 rounded-full bg-white/10 hover:bg-white/20 text-white p-2.5 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+              {images.length > 1 && (
+                <div className="mt-4 flex justify-center gap-2">
+                  {images.map((src, i) => (
+                    <button
+                      key={src}
+                      type="button"
+                      onClick={() => setSlide(i)}
+                      aria-label={`Go to image ${i + 1}`}
+                      aria-current={i === slide}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        i === slide
+                          ? "w-6 bg-primary-light"
+                          : "w-2 bg-white/30 hover:bg-white/50"
+                      }`}
+                    />
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    )}
+    </>
+  );
+}
+
+function ExpandIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-4 h-4"
+    >
+      <path d="M15 3h6v6" />
+      <path d="M9 21H3v-6" />
+      <path d="M21 3l-7 7" />
+      <path d="M3 21l7-7" />
+    </svg>
   );
 }

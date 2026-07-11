@@ -3,7 +3,7 @@ export type ProjectCategory =
   | "app-development"
   | "3d-development"
   | "video-graphics"
-  | "seo-marketing";
+  | "brand-identity";
 
 export type Project = {
   title: string;
@@ -15,6 +15,7 @@ export type Project = {
   tag?: string;
   category: ProjectCategory;
   video?: string;
+  videos?: string[];
   images?: string[];
 };
 
@@ -70,6 +71,23 @@ export const projectData: ProjectYearGroup[] = [
           "https://res.cloudinary.com/dyxdjx1vj/video/upload/v1783758995/WhatsApp_Video_2026-07-11_at_1.31.27_AM_s640da.mp4",
       },
       {
+        title: "3D Product Visualization",
+        description:
+          "Photorealistic 3D product visualization created for marketing and e-commerce. I modeled, textured, lit, and animated the product to showcase it from every angle with clean studio lighting and smooth camera motion. These render-ready animations are perfect for ads, landing pages, and social media where a real product shoot isn't practical.",
+        tags: ["Blender", "Product Visualization", "3D Animation", "Rendering"],
+        date: "",
+        preview: "",
+        github: "",
+        category: "3d-development",
+        videos: [
+          "https://res.cloudinary.com/i0ymtyku/video/upload/v1783776509/P_iy5iwc.mp4",
+          "https://res.cloudinary.com/i0ymtyku/video/upload/v1783776505/final_dijhln.mp4",
+          "https://res.cloudinary.com/i0ymtyku/video/upload/v1783776715/clearcore_upd0w1.mp4",
+          "https://res.cloudinary.com/i0ymtyku/video/upload/v1783776745/c_shine_h6ik5c.mp4",
+          "https://res.cloudinary.com/i0ymtyku/video/upload/v1783776776/renevel_clxscg.mp4",
+        ],
+      },
+      {
         title: "Cyberpunk Character Renders",
         description:
           "A stylized cyberpunk character created and rendered in 3D, featuring a half-exposed cybernetic face with detailed wiring, neon accents, and a glossy techwear outfit. I handled modeling, texturing, materials, lighting, and final rendering to achieve a moody, high-contrast look across multiple hero shots and angles.",
@@ -98,6 +116,51 @@ export const projectData: ProjectYearGroup[] = [
           "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758120/ChatGPT_Image_Jul_11_2026_01_09_46_AM_ulbmtq.png",
           "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758119/ChatGPT_Image_Jul_11_2026_01_09_12_AM_du5num.png",
           "https://res.cloudinary.com/dyxdjx1vj/image/upload/v1783758118/ChatGPT_Image_Jul_11_2026_12_58_20_AM_pzuo1z.png",
+        ],
+      },
+      {
+        title: "GREY — Brand Identity",
+        description:
+          "A complete brand identity system for GREY, built around a bold monochrome palette with striking red accents and a distinctive greyhound mark. The project covers the logo and its variations, typography, color system, stationery, packaging, and applied brand collateral — a cohesive visual language designed to feel premium, confident, and unmistakable across every touchpoint.",
+        tags: ["Brand Identity", "Logo Design", "Art Direction", "Typography"],
+        date: "",
+        preview: "",
+        github: "",
+        category: "brand-identity",
+        images: [
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777377/greyArtboard-1_ez3ztn.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777278/greyArtboard_1_bzvbrg.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777279/greyArtboard_2_zmxr2i.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777280/greyArtboard_3_blek3w.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777280/greyArtboard_4_qmhnux.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777281/greyArtboard_5_puoedu.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777280/greyArtboard_6_raqirv.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777279/greyArtboard_7_z522ny.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777280/greyArtboard_9_smpacz.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777281/greyArtboard_10_o22yyo.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777282/greyArtboard_11_rbq1dt.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777282/greyArtboard_12_x6uyzt.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777282/greyArtboard_13_ydgnoa.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777282/greyArtboard_14_exbjtq.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777282/greyArtboard_15_jnuz3w.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783777285/greyArtboard_16_i3gelx.png",
+        ],
+      },
+      {
+        title: "Social Media Graphics",
+        description:
+          "A collection of brand identity and social media design work spanning multiple clients — including GREY's bold monochrome-and-red visual identity, Moutharc's clean product launch campaign, and Caspersmile's vibrant street-interview content series. Each set covers logo usage, layout systems, typography, color, and platform-ready social assets designed to build a consistent, eye-catching presence.",
+        tags: ["Branding", "Graphic Design", "Social Media", "Photoshop", "Illustrator"],
+        date: "",
+        preview: "",
+        github: "",
+        category: "video-graphics",
+        images: [
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783775797/Group-1000006946_bvb0tz.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783775795/Group-1000006556-_1_kjmvy0.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783775794/Group-1000006948_ouerfj.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783775793/Group-1000006943_t2gkvh.jpg",
+          "https://res.cloudinary.com/i0ymtyku/image/upload/v1783775793/Group-1000006947_hnwbh1.jpg",
         ],
       },
     ],
