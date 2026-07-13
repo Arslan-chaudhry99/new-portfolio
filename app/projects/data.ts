@@ -147,6 +147,30 @@ export const projectData: ProjectYearGroup[] = [
         ],
       },
       {
+        title: "Video Editing Reel",
+        description:
+          "A polished video edit focused on pacing, transitions, and visual storytelling. Raw footage was cut, color graded, and refined into a clean, engaging piece ready for social media and brand campaigns.",
+        tags: ["Video Editing", "Post-Production", "Color Grading", "Premiere Pro"],
+        date: "",
+        preview: "",
+        github: "",
+        category: "video-graphics",
+        video:
+          "https://res.cloudinary.com/dyxdjx1vj/video/upload/v1783944495/vid_new_zoklcm.mp4",
+      },
+      {
+        title: "Video Editing Showcase",
+        description:
+          "Creative video editing work combining rhythm, motion graphics, and post-production polish. Built to capture attention quickly and deliver a professional, platform-ready final cut.",
+        tags: ["Video Editing", "After Effects", "Motion Graphics", "Post-Production"],
+        date: "",
+        preview: "",
+        github: "",
+        category: "video-graphics",
+        video:
+          "https://res.cloudinary.com/dyxdjx1vj/video/upload/v1783944445/vid_new1_dpowbk.mp4",
+      },
+      {
         title: "Social Media Graphics",
         description:
           "A collection of brand identity and social media design work spanning multiple clients — including GREY's bold monochrome-and-red visual identity, Moutharc's clean product launch campaign, and Caspersmile's vibrant street-interview content series. Each set covers logo usage, layout systems, typography, color, and platform-ready social assets designed to build a consistent, eye-catching presence.",
