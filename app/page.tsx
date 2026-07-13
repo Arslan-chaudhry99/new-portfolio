@@ -102,7 +102,21 @@ export default function Page() {
             </div>
           </section>
 
-        
+          {/* Showcase Video */}
+          <section className="relative w-full mt-12 sm:mt-16 lg:mt-20">
+            <div className="relative w-full overflow-hidden bg-black">
+              <video
+                className="w-full aspect-video min-h-[280px] sm:min-h-[420px] lg:min-h-[560px] object-cover"
+                src={homeHero.showcaseVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                aria-label="Studio showcase reel"
+              />
+            </div>
+          </section>
 
           {/* Services */}
           <section id="services" className={`${homeSectionClass} mt-32`}>

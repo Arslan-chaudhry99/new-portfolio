@@ -13,6 +13,8 @@ export const homeHero = {
     "A full-service studio for web, mobile, and 3D — we turn ideas into scalable products that help businesses grow and stand out.",
   cta: { label: "Let's get in touch", href: "/contact" },
   heroImage: "/assess/glob_image.png",
+  showcaseVideo:
+    "https://res.cloudinary.com/dyxdjx1vj/video/upload/v1783945430/RENDER_ME_xpxuwq.mp4",
 };
 
 export const clientLogos = {
