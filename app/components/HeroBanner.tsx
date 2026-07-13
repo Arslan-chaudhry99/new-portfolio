@@ -4,7 +4,7 @@ import Link from "next/link";
 type SocialLink = {
   label: string;
   href: string;
-  icon: "instagram" | "twitter" | "facebook" | "youtube" | "linkedin" | "github";
+  icon: "instagram" | "twitter" | "facebook" | "youtube" | "linkedin" | "github" | "fiverr";
 };
 
 type HeroBannerProps = {
@@ -54,6 +54,11 @@ const socialIcons: Record<SocialLink["icon"], React.ReactNode> = {
   github: (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0c-2.4-1.6-3.5-1.3-3.5-1.3a4.2 4.2 0 0 0-.1 3.2 4.6 4.6 0 0 0-1.3 3.2c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2v3.5" />
+    </svg>
+  ),
+  fiverr: (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M23.004 8.937a2.97 2.97 0 0 0-.103-.276l-2.257-5.026A3.002 3.002 0 0 0 18.003 2h-5.994a3 3 0 0 0-2.641 1.635l-2.257 5.026a2.97 2.97 0 0 0-.103.276 12.043 12.043 0 0 0-.668 2.712 12.043 12.043 0 0 0 .668 2.712c.02.095.05.185.103.276l2.257 5.026A3 3 0 0 0 12.009 22h5.994a3 3 0 0 0 2.641-1.635l2.257-5.026a2.97 2.97 0 0 0 .103-.276 12.043 12.043 0 0 0 .668-2.712 12.043 12.043 0 0 0-.668-2.712zM7.093 10.098l1.777 5.132c.032.07.06.142.06.219 0 .408-.328.732-.736.732-.271 0-.508-.147-.636-.367L7.11 15.27H5.18l.617 1.534a.736.736 0 0 1-.684 1.02.735.735 0 0 1-.684-1.02l.618-1.534H3.998a.736.736 0 0 1 0-1.472h1.731L5.11 13.298 3.314 8.166a.735.735 0 0 1 .684-1.02.735.735 0 0 1 .684 1.02l1.411 4.132zm8.008 0a.736.736 0 0 1 .736.736v5.132a.736.736 0 0 1-1.472 0v-5.132a.736.736 0 0 1 .736-.736zm3.728 0h2.208a.736.736 0 0 1 0 1.472h-1.472v1.472h1.472a.736.736 0 0 1 0 1.472h-1.472v2.208a.736.736 0 0 1-1.472 0v-5.124a.736.736 0 0 1 .736-.736z" />
     </svg>
   ),
 };

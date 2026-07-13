@@ -179,7 +179,7 @@ export default function ReviewsSection({
   if (count === 0) return null;
 
   return (
-    <section className="container mx-auto px-8 2xl:px-32 mt-32">
+    <section className="container mx-auto px-8 2xl:px-32 ">
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
         <div>
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground">

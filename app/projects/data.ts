@@ -50,7 +50,7 @@ export const projectData: ProjectYearGroup[] = [
         title: "Character Rigging & Animation",
         description:
           "A fully rigged 3D character built for smooth, production-ready animation. I set up a complete skeleton with weighted joints, inverse kinematics, and custom controllers so the model can be posed and animated naturally. The rig is optimized for game engines and real-time playback, giving animators clean deformations and an intuitive control layout for facial and body movement.",
-        tags: ["Blender", "3D Rigging", "Character Animation", "Rigify"],
+        tags: ["Blender", "Maya", "3D Rigging", "Character Animation", "Rigify"],
         date: "",
         preview: "",
         github: "",
@@ -62,7 +62,7 @@ export const projectData: ProjectYearGroup[] = [
         title: "3D Character Animation",
         description:
           "A hand-crafted 3D character animation focused on natural motion, weight, and timing. Working from a rigged model, I animated the full performance keyframe by keyframe — refining poses, arcs, and follow-through to bring the character to life. The result is a smooth, expressive sequence suitable for films, games, and product storytelling.",
-        tags: ["Blender", "3D Animation", "Keyframe Animation", "Rendering"],
+        tags: ["Blender", "Maya", "3D Animation", "Keyframe Animation", "Rendering"],
         date: "",
         preview: "",
         github: "",
@@ -74,7 +74,7 @@ export const projectData: ProjectYearGroup[] = [
         title: "3D Product Visualization",
         description:
           "Photorealistic 3D product visualization created for marketing and e-commerce. I modeled, textured, lit, and animated the product to showcase it from every angle with clean studio lighting and smooth camera motion. These render-ready animations are perfect for ads, landing pages, and social media where a real product shoot isn't practical.",
-        tags: ["Blender", "Product Visualization", "3D Animation", "Rendering"],
+        tags: ["Blender", "Maya", "Product Visualization", "3D Animation", "Rendering"],
         date: "",
         preview: "",
         github: "",
@@ -91,7 +91,7 @@ export const projectData: ProjectYearGroup[] = [
         title: "Cyberpunk Character Renders",
         description:
           "A stylized cyberpunk character created and rendered in 3D, featuring a half-exposed cybernetic face with detailed wiring, neon accents, and a glossy techwear outfit. I handled modeling, texturing, materials, lighting, and final rendering to achieve a moody, high-contrast look across multiple hero shots and angles.",
-        tags: ["Blender", "3D Modeling", "Texturing", "Lighting", "Rendering"],
+        tags: ["Blender", "Maya", "3D Modeling", "Texturing", "Lighting", "Rendering"],
         date: "",
         preview: "",
         github: "",
@@ -106,7 +106,7 @@ export const projectData: ProjectYearGroup[] = [
         title: "Character Production Pipeline",
         description:
           "A behind-the-scenes look at my full character creation workflow — from concept to final render. It walks through the process boards (sketch, grey structure, texturing, final render), the detailed concept sheet with material and color callouts, complete UV mapping layouts for body, clothes, hair, and accessories, and the high-poly sculpt. Together these show how a character goes from a rough idea to a game-ready 3D asset.",
-        tags: ["Concept Art", "Sculpting", "UV Mapping", "Blender", "ZBrush"],
+        tags: ["Concept Art", "Sculpting", "UV Mapping", "Blender", "Maya", "ZBrush"],
         date: "",
         preview: "",
         github: "",

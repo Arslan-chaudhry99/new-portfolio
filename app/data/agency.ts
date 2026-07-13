@@ -13,7 +13,7 @@ export const homeHero = {
   subheading:
     "A full-service studio for web, mobile, and 3D — we turn ideas into scalable products that help businesses grow and stand out.",
   cta: { label: "Let's get in touch", href: "/contact" },
-  backgroundVideo: "/animated_logo.mp4",
+  heroImage: "/assess/glob_image.png",
 };
 
 export const clientLogos = {
@@ -139,19 +139,14 @@ export const servicesPage = {
     socialLabel: "Follow us:",
     socialLinks: [
       {
-        label: "LinkedIn",
-        href: "https://www.linkedin.com/in/arslan-jameel/",
-        icon: "linkedin" as const,
-      },
-      {
         label: "GitHub",
         href: "https://github.com/Arslan-chaudhry99/",
         icon: "github" as const,
       },
       {
-        label: "Instagram",
-        href: "https://instagram.com/",
-        icon: "instagram" as const,
+        label: "Fiverr",
+        href: "https://www.fiverr.com/s/2KYv87Q",
+        icon: "fiverr" as const,
       },
     ],
     clientBadge: {
@@ -289,9 +284,15 @@ export const servicesPage = {
           },
           {
             id: "ar-vr",
-            label: "AR / VR Experiences",
+            label: "3D Animation",
             content:
               "Immersive augmented and virtual reality experiences for training, product demos, and interactive storytelling that engage audiences in new ways.",
+          },
+          {
+            id: "ar-vr",
+            label: "3D rigging",
+            content:
+              "3D rigging is the process of creating a skeleton for a 3D model. It is used to create a skeleton for a 3D model. It is used to create a skeleton for a 3D model. It is used to create a skeleton for a 3D model. It is used to create a skeleton for a 3D model. It is used to create a skeleton for a 3D model.",
           },
           {
             id: "ai-integration",
@@ -456,24 +457,19 @@ export const footerContent = {
     },
   ],
   contact: {
-    phones: ["USA +1 (302) 244-7860", "PAK +92 (316) 4067232"],
-    email: "hello@digitalstudio.com",
+    phones: ["PAK +923104350342", "PAK +923415403790"],
+    email: "xenorstudio@gmail.com",
   },
   social: [
-    {
-      label: "Instagram",
-      href: "https://instagram.com/",
-      icon: "instagram" as const,
-    },
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/arslan-jameel/",
-      icon: "linkedin" as const,
-    },
     {
       label: "GitHub",
       href: "https://github.com/Arslan-chaudhry99/",
       icon: "github" as const,
+    },
+    {
+      label: "Fiverr",
+      href: "https://www.fiverr.com/s/2KYv87Q",
+      icon: "fiverr" as const,
     },
   ],
   legal: {

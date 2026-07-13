@@ -43,21 +43,10 @@ export default function Page() {
           {/* Hero */}
           <section className="relative h-[100dvh] min-h-[640px] max-h-[900px] overflow-hidden">
             <div className="pointer-events-none absolute inset-0 w-full">
-              <video
-                src={homeHero.backgroundVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                aria-hidden="true"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
               <div className="absolute inset-0 bg-dots opacity-25" />
             </div>
 
-            <div className={`relative z-10 ${homeSectionClass} h-full flex flex-col justify-center pt-24 pb-6 sm:pb-8`}>
+            <div className={`relative z-10 ${homeSectionClass} h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-10 lg:gap-12 pt-24 pb-6 sm:pb-8`}>
               <div className="w-full max-w-xl">
               <h1 className="font-semibold tracking-tight text-foreground text-4xl leading-[1.2] sm:text-[2.5rem] md:text-5xl lg:leading-tight">
                 {homeHero.heading.split(" ").slice(0, 2).join(" ")}{" "}
@@ -98,42 +87,22 @@ export default function Page() {
               />
               </div>
               </div>
+
+              <div className="relative hidden lg:block w-full max-w-lg xl:max-w-xl shrink-0">
+                <Image
+                  src={homeHero.heroImage}
+                  alt=""
+                  width={1424}
+                  height={1104}
+                  priority
+                  sizes="576px"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
             </div>
           </section>
 
-          {/* Marquee */}
-          <section className="relative overflow-hidden">
-            <div className="absolute inset-0 bg-dots fade-y" />
-            <div className="py-16 inline-flex min-w-full w-max relative">
-              {[0, 1].map((row) => (
-                <div
-                  key={row}
-                  className={`min-w-full justify-around flex-shrink-0 ${
-                    row === 0 ? "animate-large-marquee" : "absolute top-16 inset-x-0 animate-large-marquee2"
-                  }`}
-                  style={{ display: "inline-flex" }}
-                >
-                  {marqueeImages.map((item, i) => (
-                    <div key={i} className="flex-shrink-0 px-6">
-                      <div className="relative group hover:scale-110 transition duration-300 rounded-xl shadow-lg shadow-background/50 hover:shadow-xl overflow-hidden -rotate-2 hover:-rotate-1">
-                        <div className="scale-110 h-80 aspect-[8/10] group-hover:scale-100 transition-transform duration-300">
-                          <Image
-                            alt=""
-                            role="presentation"
-                            aria-hidden="true"
-                            src={item}
-                            className="max-w-full h-full object-cover object-left"
-                          />
-                          <div className="absolute inset-0 bg-noise opacity-20 pointer-events-none" aria-hidden="true" />
-                        </div>
-                        <div className="absolute inset-0 shadow-[0_1.5px_0_inset_rgba(255,255,255,0.3)] rounded-xl z-10 pointer-events-none" aria-hidden="true" />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </section>
+        
 
           {/* Services */}
           <section id="services" className={`${homeSectionClass} mt-32`}>
